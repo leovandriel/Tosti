@@ -14,7 +14,7 @@ But *not* C code like:
 
     int a = 2, b = 6; if (a > 0) b /= a; printf("%i", b);
 
-This limitation has made TObjectie small and comprehensible. To deal with the absence of `if`, `for`, and the C standard library, Tosti provides a library of blocks-based wrappers. For example, you *can* do:
+This limitation has made Tosti small and comprehensible. To deal with the absence of `if`, `for`, and the C standard library, Tosti provides a library of blocks-based wrappers. For example, you *can* do:
 
     a = 2 b = 6 [TO if:TO.greater(a 0) then:^{b=TO.div(b a)}]
 
