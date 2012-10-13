@@ -1,0 +1,1166 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		B363EABF1629FC14003E80C3 /* TostiUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B363EAC01629FC14003E80C3 /* Build configuration list for PBXAggregateTarget "TostiUniversal" */;
+			buildPhases = (
+				B363EAC31629FC1B003E80C3 /* Build Univerals Framework */,
+			);
+			dependencies = (
+			);
+			name = TostiUniversal;
+			productName = TostiUniversal;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		B37699F2162962EA0050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
+		B3769A03162962FA0050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
+		B3769A17162963060050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
+		B3769A29162963C80050BAD0 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A27162963C80050BAD0 /* TORead.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769A2A162963C80050BAD0 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A27162963C80050BAD0 /* TORead.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769A2B162963C80050BAD0 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A28162963C80050BAD0 /* TORead.m */; };
+		B3769A2C162963C80050BAD0 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A28162963C80050BAD0 /* TORead.m */; };
+		B3769A2D162963C80050BAD0 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A28162963C80050BAD0 /* TORead.m */; };
+		B3769A3C162969620050BAD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A3B162969620050BAD0 /* UIKit.framework */; };
+		B3769A3D162969620050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
+		B3769A3F162969620050BAD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A3E162969620050BAD0 /* CoreGraphics.framework */; };
+		B3769A6516296A810050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699EE162962EA0050BAD0 /* libTosti.a */; };
+		B3769A6C16296BDF0050BAD0 /* NWLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A6B16296BDF0050BAD0 /* NWLogging.framework */; };
+		B3769A731629786C0050BAD0 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A711629786C0050BAD0 /* TOEval.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769A741629786C0050BAD0 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A711629786C0050BAD0 /* TOEval.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769A751629786C0050BAD0 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A721629786C0050BAD0 /* TOEval.m */; };
+		B3769A761629786C0050BAD0 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A721629786C0050BAD0 /* TOEval.m */; };
+		B3769A771629786C0050BAD0 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A721629786C0050BAD0 /* TOEval.m */; };
+		B3769A801629895D0050BAD0 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A7E1629895D0050BAD0 /* TOMem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769A811629895D0050BAD0 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A7E1629895D0050BAD0 /* TOMem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769A821629895D0050BAD0 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A7F1629895D0050BAD0 /* TOMem.m */; };
+		B3769A831629895D0050BAD0 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A7F1629895D0050BAD0 /* TOMem.m */; };
+		B3769A841629895D0050BAD0 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769A7F1629895D0050BAD0 /* TOMem.m */; };
+		B3769A8C16298E200050BAD0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A8B16298E200050BAD0 /* SenTestingKit.framework */; };
+		B3769A8D16298E200050BAD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A3B162969620050BAD0 /* UIKit.framework */; };
+		B3769A8E16298E200050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
+		B3769AA216298E310050BAD0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A8B16298E200050BAD0 /* SenTestingKit.framework */; };
+		B3769AA316298E310050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
+		B3769AC316298EC90050BAD0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AB216298E890050BAD0 /* Default-568h@2x.png */; };
+		B3769AC416298EC90050BAD0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AB316298E890050BAD0 /* Default.png */; };
+		B3769AC516298EC90050BAD0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AB416298E890050BAD0 /* Default@2x.png */; };
+		B3769AC616298EC90050BAD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AB516298E890050BAD0 /* main.m */; };
+		B3769AC716298EC90050BAD0 /* TOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AB716298E890050BAD0 /* TOAppDelegate.m */; };
+		B3769AC816298EC90050BAD0 /* TOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769ABB16298E890050BAD0 /* TOViewController.m */; };
+		B3769ACB16298F9B0050BAD0 /* TOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769ACA16298F9B0050BAD0 /* TOTest.m */; };
+		B3769ACC16298F9B0050BAD0 /* TOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769ACA16298F9B0050BAD0 /* TOTest.m */; };
+		B3769ACF1629918E0050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699EE162962EA0050BAD0 /* libTosti.a */; };
+		B3769AD2162991960050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A01162962FA0050BAD0 /* libTosti.a */; };
+		B3769AD8162995320050BAD0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AD4162995320050BAD0 /* Icon-72.png */; };
+		B3769AD9162995320050BAD0 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AD5162995320050BAD0 /* Icon-72@2x.png */; };
+		B3769ADA162995320050BAD0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AD6162995320050BAD0 /* Icon.png */; };
+		B3769ADB162995320050BAD0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AD7162995320050BAD0 /* Icon@2x.png */; };
+		B3769AE9162996430050BAD0 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AE71629963D0050BAD0 /* TO.m */; };
+		B3769AEA162996440050BAD0 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AE71629963D0050BAD0 /* TO.m */; };
+		B3769AEB162996450050BAD0 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AE71629963D0050BAD0 /* TO.m */; };
+		B3769AEC1629964F0050BAD0 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769AE61629963D0050BAD0 /* TO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769AED162996500050BAD0 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769AE61629963D0050BAD0 /* TO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769AEF162996810050BAD0 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A27162963C80050BAD0 /* TORead.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769AF0162996810050BAD0 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A711629786C0050BAD0 /* TOEval.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769AF1162996810050BAD0 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769A7E1629895D0050BAD0 /* TOMem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769AF2162996810050BAD0 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B3769AE61629963D0050BAD0 /* TO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3769AF41629981C0050BAD0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769AF31629981C0050BAD0 /* libz.dylib */; };
+		B3769AF6162998210050BAD0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769AF5162998210050BAD0 /* MessageUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3769A6616296A850050BAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B37699E3162961570050BAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B37699ED162962EA0050BAD0;
+			remoteInfo = TostiTouchStatic;
+		};
+		B3769ACD162991870050BAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B37699E3162961570050BAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B37699ED162962EA0050BAD0;
+			remoteInfo = TostiTouchStatic;
+		};
+		B3769AD0162991930050BAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B37699E3162961570050BAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3769A00162962FA0050BAD0;
+			remoteInfo = TostiCocoaStatic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B363EABD1629E570003E80C3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		B37699EE162962EA0050BAD0 /* libTosti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTosti.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37699F1162962EA0050BAD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B3769A01162962FA0050BAD0 /* libTosti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTosti.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3769A02162962FA0050BAD0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B3769A05162962FA0050BAD0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B3769A06162962FA0050BAD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B3769A07162962FA0050BAD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B3769A16162963060050BAD0 /* TostiCocoaFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TostiCocoaFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3769A261629635C0050BAD0 /* TostiCocoaFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiCocoaFramework-Info.plist"; sourceTree = "<group>"; };
+		B3769A27162963C80050BAD0 /* TORead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TORead.h; sourceTree = "<group>"; };
+		B3769A28162963C80050BAD0 /* TORead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TORead.m; sourceTree = "<group>"; };
+		B3769A39162969620050BAD0 /* TostiTouchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TostiTouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3769A3B162969620050BAD0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B3769A3E162969620050BAD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B3769A6B16296BDF0050BAD0 /* NWLogging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NWLogging.framework; path = Frameworks/NWLogging.framework; sourceTree = "<group>"; };
+		B3769A711629786C0050BAD0 /* TOEval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOEval.h; sourceTree = "<group>"; };
+		B3769A721629786C0050BAD0 /* TOEval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOEval.m; sourceTree = "<group>"; };
+		B3769A7E1629895D0050BAD0 /* TOMem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOMem.h; sourceTree = "<group>"; };
+		B3769A7F1629895D0050BAD0 /* TOMem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOMem.m; sourceTree = "<group>"; };
+		B3769A8A16298E200050BAD0 /* TostiTouchTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TostiTouchTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3769A8B16298E200050BAD0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B3769AA116298E310050BAD0 /* TostiCocoaTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TostiCocoaTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3769AB216298E890050BAD0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B3769AB316298E890050BAD0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B3769AB416298E890050BAD0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B3769AB516298E890050BAD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B3769AB616298E890050BAD0 /* TOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOAppDelegate.h; sourceTree = "<group>"; };
+		B3769AB716298E890050BAD0 /* TOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOAppDelegate.m; sourceTree = "<group>"; };
+		B3769AB816298E890050BAD0 /* TostiTouchDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiTouchDemo-Info.plist"; sourceTree = "<group>"; };
+		B3769AB916298E890050BAD0 /* TostiTouchDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TostiTouchDemo-Prefix.pch"; sourceTree = "<group>"; };
+		B3769ABA16298E890050BAD0 /* TOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOViewController.h; sourceTree = "<group>"; };
+		B3769ABB16298E890050BAD0 /* TOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOViewController.m; sourceTree = "<group>"; };
+		B3769ABD16298E890050BAD0 /* TostiCocoaTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiCocoaTest-Info.plist"; sourceTree = "<group>"; };
+		B3769ABF16298E890050BAD0 /* TostiTouchTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiTouchTest-Info.plist"; sourceTree = "<group>"; };
+		B3769ACA16298F9B0050BAD0 /* TOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTest.m; sourceTree = "<group>"; };
+		B3769AD4162995320050BAD0 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		B3769AD5162995320050BAD0 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		B3769AD6162995320050BAD0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B3769AD7162995320050BAD0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B3769AE61629963D0050BAD0 /* TO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TO.h; sourceTree = "<group>"; };
+		B3769AE71629963D0050BAD0 /* TO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TO.m; sourceTree = "<group>"; };
+		B3769AF31629981C0050BAD0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		B3769AF5162998210050BAD0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B37699EB162962EA0050BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37699F2162962EA0050BAD0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37699FE162962FA0050BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769A03162962FA0050BAD0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A12162963060050BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769A17162963060050BAD0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A36162969620050BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769AF6162998210050BAD0 /* MessageUI.framework in Frameworks */,
+				B3769AF41629981C0050BAD0 /* libz.dylib in Frameworks */,
+				B3769A6516296A810050BAD0 /* libTosti.a in Frameworks */,
+				B3769A3C162969620050BAD0 /* UIKit.framework in Frameworks */,
+				B3769A3D162969620050BAD0 /* Foundation.framework in Frameworks */,
+				B3769A3F162969620050BAD0 /* CoreGraphics.framework in Frameworks */,
+				B3769A6C16296BDF0050BAD0 /* NWLogging.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A8616298E200050BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769ACF1629918E0050BAD0 /* libTosti.a in Frameworks */,
+				B3769A8C16298E200050BAD0 /* SenTestingKit.framework in Frameworks */,
+				B3769A8D16298E200050BAD0 /* UIKit.framework in Frameworks */,
+				B3769A8E16298E200050BAD0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A9D16298E310050BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769AD2162991960050BAD0 /* libTosti.a in Frameworks */,
+				B3769AA216298E310050BAD0 /* SenTestingKit.framework in Frameworks */,
+				B3769AA316298E310050BAD0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B37699E1162961570050BAD0 = {
+			isa = PBXGroup;
+			children = (
+				B363EABD1629E570003E80C3 /* README.md */,
+				B3769A251629635C0050BAD0 /* Library */,
+				B3769AB116298E890050BAD0 /* Demo */,
+				B3769ABC16298E890050BAD0 /* Test */,
+				B37699F0162962EA0050BAD0 /* Frameworks */,
+				B37699EF162962EA0050BAD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B37699EF162962EA0050BAD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B37699EE162962EA0050BAD0 /* libTosti.a */,
+				B3769A01162962FA0050BAD0 /* libTosti.a */,
+				B3769A16162963060050BAD0 /* TostiCocoaFramework.framework */,
+				B3769A39162969620050BAD0 /* TostiTouchDemo.app */,
+				B3769A8A16298E200050BAD0 /* TostiTouchTest.octest */,
+				B3769AA116298E310050BAD0 /* TostiCocoaTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B37699F0162962EA0050BAD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3769AF5162998210050BAD0 /* MessageUI.framework */,
+				B3769AF31629981C0050BAD0 /* libz.dylib */,
+				B3769A6B16296BDF0050BAD0 /* NWLogging.framework */,
+				B37699F1162962EA0050BAD0 /* Foundation.framework */,
+				B3769A02162962FA0050BAD0 /* Cocoa.framework */,
+				B3769A3B162969620050BAD0 /* UIKit.framework */,
+				B3769A3E162969620050BAD0 /* CoreGraphics.framework */,
+				B3769A8B16298E200050BAD0 /* SenTestingKit.framework */,
+				B3769A04162962FA0050BAD0 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3769A04162962FA0050BAD0 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3769A05162962FA0050BAD0 /* AppKit.framework */,
+				B3769A06162962FA0050BAD0 /* CoreData.framework */,
+				B3769A07162962FA0050BAD0 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B3769A251629635C0050BAD0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B3769A27162963C80050BAD0 /* TORead.h */,
+				B3769A28162963C80050BAD0 /* TORead.m */,
+				B3769A711629786C0050BAD0 /* TOEval.h */,
+				B3769A721629786C0050BAD0 /* TOEval.m */,
+				B3769A7E1629895D0050BAD0 /* TOMem.h */,
+				B3769A7F1629895D0050BAD0 /* TOMem.m */,
+				B3769AE61629963D0050BAD0 /* TO.h */,
+				B3769AE71629963D0050BAD0 /* TO.m */,
+				B3769AD3162991F40050BAD0 /* Supporting Files */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		B3769AB116298E890050BAD0 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				B3769ABA16298E890050BAD0 /* TOViewController.h */,
+				B3769ABB16298E890050BAD0 /* TOViewController.m */,
+				B3769AC216298EA50050BAD0 /* Supporting Files */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		B3769ABC16298E890050BAD0 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				B3769ACA16298F9B0050BAD0 /* TOTest.m */,
+				B3769AC116298E980050BAD0 /* Supporting Files */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		B3769AC116298E980050BAD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3769ABD16298E890050BAD0 /* TostiCocoaTest-Info.plist */,
+				B3769ABF16298E890050BAD0 /* TostiTouchTest-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3769AC216298EA50050BAD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3769AD4162995320050BAD0 /* Icon-72.png */,
+				B3769AD5162995320050BAD0 /* Icon-72@2x.png */,
+				B3769AD6162995320050BAD0 /* Icon.png */,
+				B3769AD7162995320050BAD0 /* Icon@2x.png */,
+				B3769AB216298E890050BAD0 /* Default-568h@2x.png */,
+				B3769AB316298E890050BAD0 /* Default.png */,
+				B3769AB416298E890050BAD0 /* Default@2x.png */,
+				B3769AB516298E890050BAD0 /* main.m */,
+				B3769AB616298E890050BAD0 /* TOAppDelegate.h */,
+				B3769AB716298E890050BAD0 /* TOAppDelegate.m */,
+				B3769AB816298E890050BAD0 /* TostiTouchDemo-Info.plist */,
+				B3769AB916298E890050BAD0 /* TostiTouchDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3769AD3162991F40050BAD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3769A261629635C0050BAD0 /* TostiCocoaFramework-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B37699FF162962FA0050BAD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769A29162963C80050BAD0 /* TORead.h in Headers */,
+				B3769A731629786C0050BAD0 /* TOEval.h in Headers */,
+				B3769A801629895D0050BAD0 /* TOMem.h in Headers */,
+				B3769AEC1629964F0050BAD0 /* TO.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A13162963060050BAD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769A2A162963C80050BAD0 /* TORead.h in Headers */,
+				B3769A741629786C0050BAD0 /* TOEval.h in Headers */,
+				B3769A811629895D0050BAD0 /* TOMem.h in Headers */,
+				B3769AED162996500050BAD0 /* TO.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769AEE162996730050BAD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769AEF162996810050BAD0 /* TORead.h in Headers */,
+				B3769AF0162996810050BAD0 /* TOEval.h in Headers */,
+				B3769AF1162996810050BAD0 /* TOMem.h in Headers */,
+				B3769AF2162996810050BAD0 /* TO.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B37699ED162962EA0050BAD0 /* TostiTouchStatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B37699FA162962EA0050BAD0 /* Build configuration list for PBXNativeTarget "TostiTouchStatic" */;
+			buildPhases = (
+				B37699EA162962EA0050BAD0 /* Sources */,
+				B37699EB162962EA0050BAD0 /* Frameworks */,
+				B3769AEE162996730050BAD0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TostiTouchStatic;
+			productName = TostiTouchStatic;
+			productReference = B37699EE162962EA0050BAD0 /* libTosti.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B3769A00162962FA0050BAD0 /* TostiCocoaStatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3769A0E162962FA0050BAD0 /* Build configuration list for PBXNativeTarget "TostiCocoaStatic" */;
+			buildPhases = (
+				B37699FD162962FA0050BAD0 /* Sources */,
+				B37699FE162962FA0050BAD0 /* Frameworks */,
+				B37699FF162962FA0050BAD0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TostiCocoaStatic;
+			productName = TostiCocoaStatic;
+			productReference = B3769A01162962FA0050BAD0 /* libTosti.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B3769A15162963060050BAD0 /* TostiCocoaFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3769A22162963060050BAD0 /* Build configuration list for PBXNativeTarget "TostiCocoaFramework" */;
+			buildPhases = (
+				B3769A11162963060050BAD0 /* Sources */,
+				B3769A12162963060050BAD0 /* Frameworks */,
+				B3769A13162963060050BAD0 /* Headers */,
+				B3769A14162963060050BAD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TostiCocoaFramework;
+			productName = TostiCocoaFramework;
+			productReference = B3769A16162963060050BAD0 /* TostiCocoaFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B3769A38162969620050BAD0 /* TostiTouchDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3769A52162969620050BAD0 /* Build configuration list for PBXNativeTarget "TostiTouchDemo" */;
+			buildPhases = (
+				B3769A35162969620050BAD0 /* Sources */,
+				B3769A36162969620050BAD0 /* Frameworks */,
+				B3769A37162969620050BAD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3769A6716296A850050BAD0 /* PBXTargetDependency */,
+			);
+			name = TostiTouchDemo;
+			productName = TostiTouchDemo;
+			productReference = B3769A39162969620050BAD0 /* TostiTouchDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3769A8916298E200050BAD0 /* TostiTouchTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3769A9916298E200050BAD0 /* Build configuration list for PBXNativeTarget "TostiTouchTest" */;
+			buildPhases = (
+				B3769A8516298E200050BAD0 /* Sources */,
+				B3769A8616298E200050BAD0 /* Frameworks */,
+				B3769A8716298E200050BAD0 /* Resources */,
+				B3769A8816298E200050BAD0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3769ACE162991870050BAD0 /* PBXTargetDependency */,
+			);
+			name = TostiTouchTest;
+			productName = TostiTouchTest;
+			productReference = B3769A8A16298E200050BAD0 /* TostiTouchTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B3769AA016298E310050BAD0 /* TostiCocoaTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3769AAE16298E310050BAD0 /* Build configuration list for PBXNativeTarget "TostiCocoaTest" */;
+			buildPhases = (
+				B3769A9C16298E310050BAD0 /* Sources */,
+				B3769A9D16298E310050BAD0 /* Frameworks */,
+				B3769A9E16298E310050BAD0 /* Resources */,
+				B3769A9F16298E310050BAD0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3769AD1162991930050BAD0 /* PBXTargetDependency */,
+			);
+			name = TostiCocoaTest;
+			productName = TostiCocoaTest;
+			productReference = B3769AA116298E310050BAD0 /* TostiCocoaTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B37699E3162961570050BAD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TO;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Tosti;
+			};
+			buildConfigurationList = B37699E6162961570050BAD0 /* Build configuration list for PBXProject "Tosti" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B37699E1162961570050BAD0;
+			productRefGroup = B37699EF162962EA0050BAD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B37699ED162962EA0050BAD0 /* TostiTouchStatic */,
+				B3769A00162962FA0050BAD0 /* TostiCocoaStatic */,
+				B3769A15162963060050BAD0 /* TostiCocoaFramework */,
+				B3769A8916298E200050BAD0 /* TostiTouchTest */,
+				B3769AA016298E310050BAD0 /* TostiCocoaTest */,
+				B3769A38162969620050BAD0 /* TostiTouchDemo */,
+				B363EABF1629FC14003E80C3 /* TostiUniversal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3769A14162963060050BAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A37162969620050BAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769AC316298EC90050BAD0 /* Default-568h@2x.png in Resources */,
+				B3769AC416298EC90050BAD0 /* Default.png in Resources */,
+				B3769AC516298EC90050BAD0 /* Default@2x.png in Resources */,
+				B3769AD8162995320050BAD0 /* Icon-72.png in Resources */,
+				B3769AD9162995320050BAD0 /* Icon-72@2x.png in Resources */,
+				B3769ADA162995320050BAD0 /* Icon.png in Resources */,
+				B3769ADB162995320050BAD0 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A8716298E200050BAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A9E16298E310050BAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B363EAC31629FC1B003E80C3 /* Build Univerals Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Univerals Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#set -e\n\nPROJECT=\"Tosti\"\nTARGET_TOUCH=\"TostiTouchStatic\"\nTARGET_COCOA=\"TostiCocoaStatic\"\nHEADERS=\"usr/local/include\"\nPRODUCT=\"Tosti\"\nOUTPUT=\"Tosti\"\n\necho \"Remove previous\"\nrm -rf \"${SRCROOT}/build/$OUTPUT/\"\nrm -rf \"${SRCROOT}/build/$OUTPUT.framework/\"\n\necho \"Building iphoneos and iphonesimulator\"\nxcodebuild -project \"${SRCROOT}/$PROJECT.xcodeproj\" -target $TARGET_TOUCH -configuration Release -arch \"armv6 armv7 armv7s\" -sdk iphoneos\nxcodebuild -project \"${SRCROOT}/$PROJECT.xcodeproj\" -target $TARGET_TOUCH -configuration Release -arch i386 -sdk iphonesimulator\nxcodebuild -project \"${SRCROOT}/$PROJECT.xcodeproj\" -target $TARGET_COCOA -configuration Release -arch x86_64 -sdk macosx\n\necho \"Lipoing things together\"\nmkdir \"${SRCROOT}/build/$OUTPUT\"\nlipo -create -output \"${SRCROOT}/build/$OUTPUT/lib$OUTPUT.a\" \"${SRCROOT}/build/Release/lib$PRODUCT.a\" \"${SRCROOT}/build/Release-iphoneos/lib$PRODUCT.a\" \"${SRCROOT}/build/Release-iphonesimulator/lib$PRODUCT.a\"\ncp -R \"${SRCROOT}/build/Release/$HEADERS\" \"${SRCROOT}/build/$OUTPUT/Headers\"\n\necho \"Create framework\"\nmkdir -p \"${SRCROOT}/build/$OUTPUT.framework/Versions/A\"\ncp -R \"${SRCROOT}/build/$OUTPUT/Headers\" \"${SRCROOT}/build/$OUTPUT.framework/Versions/A\"\ncp \"${SRCROOT}/build/$OUTPUT/lib$OUTPUT.a\" \"${SRCROOT}/build/$OUTPUT.framework/Versions/A/$OUTPUT\"\n\nln -s \"A\" \"${SRCROOT}/build/$OUTPUT.framework/Versions/Current\"\nln -s \"Versions/Current/Headers\" \"${SRCROOT}/build/$OUTPUT.framework/Headers\"\nln -s \"Versions/Current/$OUTPUT\" \"${SRCROOT}/build/$OUTPUT.framework/$OUTPUT\"\n\necho \"Cleaning up\"\nrm -rf \"${SRCROOT}/build/Release/\"\nrm -rf \"${SRCROOT}/build/Release-iphoneos/\"\nrm -rf \"${SRCROOT}/build/Release-iphonesimulator/\"\nrm -rf \"${SRCROOT}/build/$PROJECT.build/\"\n\necho \"Done\"\n";
+		};
+		B3769A8816298E200050BAD0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		B3769A9F16298E310050BAD0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B37699EA162962EA0050BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769A2B162963C80050BAD0 /* TORead.m in Sources */,
+				B3769A751629786C0050BAD0 /* TOEval.m in Sources */,
+				B3769A821629895D0050BAD0 /* TOMem.m in Sources */,
+				B3769AE9162996430050BAD0 /* TO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37699FD162962FA0050BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769A2C162963C80050BAD0 /* TORead.m in Sources */,
+				B3769A761629786C0050BAD0 /* TOEval.m in Sources */,
+				B3769A831629895D0050BAD0 /* TOMem.m in Sources */,
+				B3769AEB162996450050BAD0 /* TO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A11162963060050BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769A2D162963C80050BAD0 /* TORead.m in Sources */,
+				B3769A771629786C0050BAD0 /* TOEval.m in Sources */,
+				B3769A841629895D0050BAD0 /* TOMem.m in Sources */,
+				B3769AEA162996440050BAD0 /* TO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A35162969620050BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769AC616298EC90050BAD0 /* main.m in Sources */,
+				B3769AC716298EC90050BAD0 /* TOAppDelegate.m in Sources */,
+				B3769AC816298EC90050BAD0 /* TOViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A8516298E200050BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769ACB16298F9B0050BAD0 /* TOTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3769A9C16298E310050BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3769ACC16298F9B0050BAD0 /* TOTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3769A6716296A850050BAD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B37699ED162962EA0050BAD0 /* TostiTouchStatic */;
+			targetProxy = B3769A6616296A850050BAD0 /* PBXContainerItemProxy */;
+		};
+		B3769ACE162991870050BAD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B37699ED162962EA0050BAD0 /* TostiTouchStatic */;
+			targetProxy = B3769ACD162991870050BAD0 /* PBXContainerItemProxy */;
+		};
+		B3769AD1162991930050BAD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3769A00162962FA0050BAD0 /* TostiCocoaStatic */;
+			targetProxy = B3769AD0162991930050BAD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B363EAC11629FC14003E80C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B363EAC21629FC14003E80C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B37699E8162961570050BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+			};
+			name = Debug;
+		};
+		B37699E9162961570050BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+			};
+			name = Release;
+		};
+		B37699FB162962EA0050BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/TostiTouchStatic.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Tosti;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B37699FC162962EA0050BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/TostiTouchStatic.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Tosti;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3769A0F162962FA0050BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Tosti;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B3769A10162962FA0050BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = Tosti;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B3769A23162963060050BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Library/TostiCocoaFramework-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		B3769A24162963060050BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Library/TostiCocoaFramework-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		B3769A53162969620050BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/TostiTouchDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/TostiTouchDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B3769A54162969620050BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/TostiTouchDemo-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/TostiTouchDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B3769A9A16298E200050BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Test/TostiTouchTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B3769A9B16298E200050BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Test/TostiTouchTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		B3769AAF16298E310050BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Test/TostiCocoaTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B3769AB016298E310050BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Test/TostiCocoaTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B363EAC01629FC14003E80C3 /* Build configuration list for PBXAggregateTarget "TostiUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B363EAC11629FC14003E80C3 /* Debug */,
+				B363EAC21629FC14003E80C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B37699E6162961570050BAD0 /* Build configuration list for PBXProject "Tosti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37699E8162961570050BAD0 /* Debug */,
+				B37699E9162961570050BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B37699FA162962EA0050BAD0 /* Build configuration list for PBXNativeTarget "TostiTouchStatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37699FB162962EA0050BAD0 /* Debug */,
+				B37699FC162962EA0050BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3769A0E162962FA0050BAD0 /* Build configuration list for PBXNativeTarget "TostiCocoaStatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3769A0F162962FA0050BAD0 /* Debug */,
+				B3769A10162962FA0050BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3769A22162963060050BAD0 /* Build configuration list for PBXNativeTarget "TostiCocoaFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3769A23162963060050BAD0 /* Debug */,
+				B3769A24162963060050BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3769A52162969620050BAD0 /* Build configuration list for PBXNativeTarget "TostiTouchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3769A53162969620050BAD0 /* Debug */,
+				B3769A54162969620050BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3769A9916298E200050BAD0 /* Build configuration list for PBXNativeTarget "TostiTouchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3769A9A16298E200050BAD0 /* Debug */,
+				B3769A9B16298E200050BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3769AAE16298E310050BAD0 /* Build configuration list for PBXNativeTarget "TostiCocoaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3769AAF16298E310050BAD0 /* Debug */,
+				B3769AB016298E310050BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B37699E3162961570050BAD0 /* Project object */;
+}
