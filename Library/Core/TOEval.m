@@ -32,11 +32,11 @@ static NSUInteger const TOStackSize = 100;
     return self;
 }
 
-- (id)run
+- (id)eval
 {
     _abort = NO;
     [_mem set:self name:@"_eval"];
-    id result = [self runStatement:_statement];
+    id result = [self evalStatement:_statement];
     [_mem unset:@"_eval"];
     _abort = NO;
     return result;
@@ -49,10 +49,15 @@ static NSUInteger const TOStackSize = 100;
     }
 }
 
++ (id)evalStatement:(NSArray *)statement
+{
+    return [(TOEval *)[[self alloc] initWithStatement:statement mem:[[TOMem alloc] init]] eval];
+}
+
 
 #pragma mark - Running
 
-- (id)runStatement:(NSArray *)statement
+- (id)evalStatement:(NSArray *)statement
 {
     id result = nil;
     NSUInteger index = statement.count > 1 ? [statement[1] integerValue] : 0;
@@ -65,7 +70,7 @@ static NSUInteger const TOStackSize = 100;
         char type = statement.count > 0 ? [statement[0] characterAtIndex:0] : '\0';
         switch (type) {
             case 'a': { // assignment
-                id value = statement.count > 3 ? [self runStatement:statement[3]] : nil;
+                id value = statement.count > 3 ? [self evalStatement:statement[3]] : nil;
                 [_mem set:value name:statement.count > 2 ? statement[2] : nil];
                 result = value;
             } break;
@@ -77,19 +82,19 @@ static NSUInteger const TOStackSize = 100;
                     if (arguments.count > 1) [_mem set:b name:arguments[1]];
                     if (arguments.count > 2) [_mem set:c name:arguments[2]];
                     if (arguments.count > 3) [_mem set:d name:arguments[3]];
-                    return [self runStatement:scope];
+                    return [self evalStatement:scope];
                 };
                 result = [block copy];
             } break;
             case 'i': { // invoke
                 id target = statement.count > 2 ? statement[2]: nil;
-                if ([target isKindOfClass:NSArray.class]) target = [self runStatement:target];
+                if ([target isKindOfClass:NSArray.class]) target = [self evalStatement:target];
                 else if ([target isKindOfClass:NSString.class]) target = [_mem get:target];
                 else [self logAt:index line:@"Unknown invoke target type '%@'", target];
                 NSArray *arguments = statement.count > 3 ? statement[3] : nil;
                 NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:arguments.count];
                 for (id argument in arguments) {
-                    id value = [self runStatement:value == TONil ? nil : argument];
+                    id value = [self evalStatement:value == TONil ? nil : argument];
                     [values addObject:value ? value : TONil];
                 }
                 id (^block)(id, id, id, id) = (id(^)(id, id, id, id))target;
@@ -101,25 +106,25 @@ static NSUInteger const TOStackSize = 100;
             } break;
             case 'm': { // method
                 id target = statement.count > 2 ? statement[2]: nil;
-                if ([target isKindOfClass:NSArray.class]) target = [self runStatement:target];
+                if ([target isKindOfClass:NSArray.class]) target = [self evalStatement:target];
                 else if ([target isKindOfClass:NSString.class]) target = [_mem get:target];
                 else if (target) [self logAt:index line:@"Unknown method target type '%@'", target];
                 NSString *selector = statement.count > 3 ? statement[3] : nil;
                 NSArray *arguments = statement.count > 4 ? statement[4] : nil;
                 NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:arguments.count];
                 for (id argument in arguments) {
-                    id value = [self runStatement:(value == TONil ? nil : argument)];
+                    id value = [self evalStatement:(value == TONil ? nil : argument)];
                     [values addObject:value ? value : TONil];
                 }
                 result = [self performOnTarget:target selectorString:selector arguments:values index:index];
             } break;
             case 'r': { // reference
                 id target = statement.count > 2 ? statement[2]: nil;
-                if ([target isKindOfClass:NSArray.class]) target = [self runStatement:target];
+                if ([target isKindOfClass:NSArray.class]) target = [self evalStatement:target];
                 else if ([target isKindOfClass:NSString.class]) target = [_mem get:target];
                 else [self logAt:index line:@"Unknown reference target type '%@'", target];
                 if (statement.count > 3) {
-                    id index = [self runStatement:statement[3]];
+                    id index = [self evalStatement:statement[3]];
                     if ([target isKindOfClass:NSArray.class]) result = [target objectAtIndex:[index unsignedIntegerValue]];
                     else if ([target isKindOfClass:NSDictionary.class]) result = [target objectForKey:index];
                 } else result = target;
@@ -133,9 +138,9 @@ static NSUInteger const TOStackSize = 100;
                     if ([s isKindOfClass:NSArray.class]) {
                         char t = s.count > 0 ? [s[0] characterAtIndex:0] : '\0';
                         switch (t) {
-                            case 'e': result = s.count > 2 ? [self runStatement:s[2]] : nil; brk = YES; break;
+                            case 'e': result = s.count > 2 ? [self evalStatement:s[2]] : nil; brk = YES; break;
                             case 'v': case 'r': log = YES; // fallthrough
-                            default: result = [self runStatement:s]; break;
+                            default: result = [self evalStatement:s]; break;
                         }
                     } else [self logAt:index line:@"Unknown statement '%@'", s];
                     if (brk) break;
@@ -148,19 +153,19 @@ static NSUInteger const TOStackSize = 100;
                     case 'a': {
                         result = [[NSMutableArray alloc] initWithCapacity:[value count]];
                         for (id s in value) {
-                            id value = [self runStatement:s];
+                            id value = [self evalStatement:s];
                             [result addObject:value ? value : NSNull.null];
                         }
                     } break;
                     case 'd': {
                         result = [[NSMutableDictionary alloc] initWithCapacity:[value count]];
                         for (NSArray *pair in value) {
-                            id key = [self runStatement:pair[0]];
-                            id value = pair.count > 1 ? [self runStatement:pair[1]] : nil;
+                            id key = [self evalStatement:pair[0]];
+                            id value = pair.count > 1 ? [self evalStatement:pair[1]] : nil;
                             [result setObject:value ? value : NSNull.null forKey:key ? key : NSNull.null];
                         }
                     } break;
-                    case 's': result = [self runStatement:value]; break;
+                    case 's': result = [self evalStatement:value]; break;
                     case 'v': result = value; break;
                     default: [self logAt:index line:@"Unknown value type '%c'", type]; result = value;
                 }

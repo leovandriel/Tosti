@@ -18,5 +18,6 @@
 
 - (id)initWithCode:(NSString *)code;
 - (NSArray *)read;
++ (NSArray *)readCode:(NSString *)code;
 
 @end

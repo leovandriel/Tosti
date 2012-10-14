@@ -19,7 +19,8 @@
 @property (nonatomic, weak) id<TODelegate> delegate;
 
 - (id)initWithStatement:(NSArray *)statement mem:(TOMem *)mem;
-- (id)run;
+- (id)eval;
 - (void)abort;
++ (id)evalStatement:(NSArray *)statement;
 
 @end

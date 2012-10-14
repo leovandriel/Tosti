@@ -44,12 +44,12 @@
         _history = [NSMutableArray arrayWithObject:@""];
     }
     
-    _mem = [[TOMem alloc] init];
-    [_mem set:self name:@"self"];
+    _mem = [TOMem eval:@"[[TOMem alloc] init]"];
+    [_mem eval:@"TO.load(_mem,TO)"];
+    [_mem eval:@"load(_mem,TOMath)"];
+    [_mem eval:@"load(_mem,TOCocoa)"];
     
-    [_mem run:@"TO.load(_mem,TO)"];
-    [_mem run:@"load(_mem,TOMath)"];
-    [_mem run:@"load(_mem,TOCocoa)"];
+    [_mem set:self name:@"self"];
 }
 
 - (void)run
@@ -65,7 +65,7 @@
             eval.source = text;
             eval.delegate = self;
             [_eval abort]; _eval = eval;
-            id result = [eval run];
+            id result = [eval eval];
             [self log:[[NSString alloc] initWithFormat:@"out: %@", result]];
         } else {
             [self log:[[NSString alloc] initWithFormat:@"break"]];

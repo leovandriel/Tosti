@@ -44,6 +44,11 @@ static NSString *TOTypeReturn       = @"e";
     return [self scope];
 }
 
++ (NSArray *)readCode:(NSString *)code
+{
+    return [[[TORead alloc] initWithCode:code] read];
+}
+
 
 #pragma mark - Composites
 

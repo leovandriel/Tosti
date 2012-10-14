@@ -100,12 +100,12 @@ id const TONil = @"TONil";
     [_parent dumpInto:array];
 }
 
-- (id)run:(NSString *)code
+- (id)eval:(NSString *)code
 {
-    return [self run:code delegate:nil];
+    return [self eval:code delegate:nil];
 }
 
-- (id)run:(NSString *)code delegate:(id<TODelegate>)delegate
+- (id)eval:(NSString *)code delegate:(id<TODelegate>)delegate
 {
     TORead *read = [[TORead alloc] initWithCode:code];
     read.delegate = delegate;
@@ -114,9 +114,14 @@ id const TONil = @"TONil";
         TOEval *eval = [[TOEval alloc] initWithStatement:statement mem:self];
         eval.source = code;
         eval.delegate = delegate;
-        return [eval run];
+        return [eval eval];
     }
     return nil;
+}
+
++ (id)eval:(NSString *)code
+{
+    return [TOEval evalStatement:[TORead readCode:code]];
 }
 
 + (NSString *)formatAt:(NSUInteger)index code:(const char *)code string:(NSString *)string

@@ -19,8 +19,9 @@ extern id const TONil;
 - (void)clear;
 
 - (NSArray *)dump;
-- (id)run:(NSString *)code;
-- (id)run:(NSString *)code delegate:(id<TODelegate>)delegate;
+- (id)eval:(NSString *)code;
+- (id)eval:(NSString *)code delegate:(id<TODelegate>)delegate;
++ (id)eval:(NSString *)code;
 + (NSString *)formatAt:(NSUInteger)index code:(const char *)code string:(NSString *)string;
 
 @end
