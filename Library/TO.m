@@ -278,6 +278,9 @@
     return ^id(id delay, id queue, id block) {
         if ([delay isKindOfClass:NSArray.class] && [delay count] == 3) {
             block = delay[2]; queue = delay[1]; delay = delay[0];
+        } else if (!block) {
+            block = queue;
+            queue = nil;
         }
         if (block) {
             double d = [delay isKindOfClass:NSNumber.class] ? [delay doubleValue] : 0.0;
@@ -295,6 +298,9 @@
     return ^id(id queue, id block) {
         if ([queue isKindOfClass:NSArray.class] && [queue count] == 2) {
             block = queue[1]; queue = queue[0];
+        } else if (!block) {
+            block = queue;
+            queue = nil;
         }
         if (block) {
             dispatch_queue_t q = [queue isKindOfClass:TOValue.class] ? (dispatch_queue_t)[queue pointerValue] : dispatch_get_main_queue();
@@ -334,24 +340,33 @@
     };
 }
 
-+ (id(^)(id,id))load
++ (id(^)(id,id,id,id))load
 {
-    return ^id(id target, id mem) {
+    return ^id(id mem, id targets, id target2, id target3) {
+        if (![targets isKindOfClass:NSArray.class]) {
+            NSMutableArray *t = [[NSMutableArray alloc] init];
+            if (targets) [t addObject:targets];
+            if (target2) [t addObject:target2];
+            if (target3) [t addObject:target3];
+            targets = t;
+        }
         if ([mem isKindOfClass:TOMem.class]) {
             NSMutableArray *result = [[NSMutableArray alloc] init];
-            for (NSString *selector in [self selectorsForObject:target]) {
-                SEL sel = NSSelectorFromString(selector);
-                NSMethodSignature *signature = [target methodSignatureForSelector:sel];
-                if (signature.numberOfArguments == 2 && !strcmp(signature.methodReturnType, @encode(void(^)(void))) && [target respondsToSelector:sel]) {
-                    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-                    [invocation setSelector:sel];
-                    @try {
-                        [invocation invokeWithTarget:target];
-                        id value = nil;
-                        [invocation getReturnValue:&value];
-                        [mem set:value name:selector];
-                        [result addObject:selector];
-                    } @catch (NSException *exception) {}
+            for (id target in targets) {
+                for (NSString *selector in [self selectorsForObject:target]) {
+                    SEL sel = NSSelectorFromString(selector);
+                    NSMethodSignature *signature = [target methodSignatureForSelector:sel];
+                    if (signature.numberOfArguments == 2 && !strcmp(signature.methodReturnType, @encode(void(^)(void))) && [target respondsToSelector:sel]) {
+                        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+                        [invocation setSelector:sel];
+                        @try {
+                            [invocation invokeWithTarget:target];
+                            id value = nil;
+                            [invocation getReturnValue:&value];
+                            [mem set:value name:selector];
+                            [result addObject:selector];
+                        } @catch (NSException *exception) {}
+                    }
                 }
             }
             return result;
