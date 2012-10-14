@@ -326,14 +326,14 @@
     return result;
 }
 
-+ (id(^)(id))selectors
++ (id(^)(id))selectorsOf
 {
     return ^id(id value) {
-        return [[self selectorsForObject:value] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+        return [[TO selectorsForObject:value] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
     };
 }
 
-+ (id(^)(id))super
++ (id(^)(id))superOf
 {
     return ^id(id value) {
         return class_getSuperclass([value class]);
@@ -353,7 +353,7 @@
         if ([mem isKindOfClass:TOMem.class]) {
             NSMutableArray *result = [[NSMutableArray alloc] init];
             for (id target in targets) {
-                for (NSString *selector in [self selectorsForObject:target]) {
+                for (NSString *selector in [TO selectorsForObject:target]) {
                     SEL sel = NSSelectorFromString(selector);
                     NSMethodSignature *signature = [target methodSignatureForSelector:sel];
                     if (signature.numberOfArguments == 2 && !strcmp(signature.methodReturnType, @encode(void(^)(void))) && [target respondsToSelector:sel]) {

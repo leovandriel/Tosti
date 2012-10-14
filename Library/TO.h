@@ -38,8 +38,8 @@
 + (id(^)(id,id,id))dispatch_after;
 + (id(^)(id,id))dispatch_async;
 
-+ (id(^)(id))selectors;
-+ (id(^)(id))super;
++ (id(^)(id))selectorsOf;
++ (id(^)(id))superOf;
 + (id(^)(id,id,id,id))load;
 
 @end
