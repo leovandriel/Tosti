@@ -21,42 +21,42 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B35C9881162B33B9003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9875162B33B9003A1D03 /* TO.h */; };
-		B35C9882162B33B9003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9875162B33B9003A1D03 /* TO.h */; };
-		B35C9883162B33B9003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9875162B33B9003A1D03 /* TO.h */; };
-		B35C9884162B33B9003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9876162B33B9003A1D03 /* TO.m */; };
-		B35C9885162B33B9003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9876162B33B9003A1D03 /* TO.m */; };
-		B35C9886162B33B9003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9876162B33B9003A1D03 /* TO.m */; };
-		B35C9887162B33B9003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9877162B33B9003A1D03 /* TOCocoa.h */; };
-		B35C9888162B33B9003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9877162B33B9003A1D03 /* TOCocoa.h */; };
-		B35C9889162B33B9003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9877162B33B9003A1D03 /* TOCocoa.h */; };
-		B35C988A162B33B9003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9878162B33B9003A1D03 /* TOCocoa.m */; };
-		B35C988B162B33B9003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9878162B33B9003A1D03 /* TOCocoa.m */; };
-		B35C988C162B33B9003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9878162B33B9003A1D03 /* TOCocoa.m */; };
-		B35C988D162B33B9003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9879162B33B9003A1D03 /* TOEval.h */; };
-		B35C988E162B33B9003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9879162B33B9003A1D03 /* TOEval.h */; };
-		B35C988F162B33B9003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C9879162B33B9003A1D03 /* TOEval.h */; };
-		B35C9890162B33B9003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987A162B33B9003A1D03 /* TOEval.m */; };
-		B35C9891162B33B9003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987A162B33B9003A1D03 /* TOEval.m */; };
-		B35C9892162B33B9003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987A162B33B9003A1D03 /* TOEval.m */; };
-		B35C9893162B33B9003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987B162B33B9003A1D03 /* TOMath.h */; };
-		B35C9894162B33B9003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987B162B33B9003A1D03 /* TOMath.h */; };
-		B35C9895162B33B9003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987B162B33B9003A1D03 /* TOMath.h */; };
-		B35C9896162B33B9003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987C162B33B9003A1D03 /* TOMath.m */; };
-		B35C9897162B33B9003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987C162B33B9003A1D03 /* TOMath.m */; };
-		B35C9898162B33B9003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987C162B33B9003A1D03 /* TOMath.m */; };
-		B35C9899162B33B9003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987D162B33B9003A1D03 /* TOMem.h */; };
-		B35C989A162B33B9003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987D162B33B9003A1D03 /* TOMem.h */; };
-		B35C989B162B33B9003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987D162B33B9003A1D03 /* TOMem.h */; };
-		B35C989C162B33B9003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987E162B33B9003A1D03 /* TOMem.m */; };
-		B35C989D162B33B9003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987E162B33B9003A1D03 /* TOMem.m */; };
-		B35C989E162B33B9003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C987E162B33B9003A1D03 /* TOMem.m */; };
-		B35C989F162B33B9003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987F162B33B9003A1D03 /* TORead.h */; };
-		B35C98A0162B33B9003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987F162B33B9003A1D03 /* TORead.h */; };
-		B35C98A1162B33B9003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C987F162B33B9003A1D03 /* TORead.h */; };
-		B35C98A2162B33B9003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9880162B33B9003A1D03 /* TORead.m */; };
-		B35C98A3162B33B9003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9880162B33B9003A1D03 /* TORead.m */; };
-		B35C98A4162B33B9003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C9880162B33B9003A1D03 /* TORead.m */; };
+		B35C98B3162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; };
+		B35C98B4162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; };
+		B35C98B5162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; };
+		B35C98B6162B3453003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A7162B3453003A1D03 /* TOEval.m */; };
+		B35C98B7162B3453003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A7162B3453003A1D03 /* TOEval.m */; };
+		B35C98B8162B3453003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A7162B3453003A1D03 /* TOEval.m */; };
+		B35C98B9162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; };
+		B35C98BA162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; };
+		B35C98BB162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; };
+		B35C98BC162B3453003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A9162B3453003A1D03 /* TOMem.m */; };
+		B35C98BD162B3453003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A9162B3453003A1D03 /* TOMem.m */; };
+		B35C98BE162B3453003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A9162B3453003A1D03 /* TOMem.m */; };
+		B35C98BF162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; };
+		B35C98C0162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; };
+		B35C98C1162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; };
+		B35C98C2162B3453003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AB162B3453003A1D03 /* TORead.m */; };
+		B35C98C3162B3453003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AB162B3453003A1D03 /* TORead.m */; };
+		B35C98C4162B3453003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AB162B3453003A1D03 /* TORead.m */; };
+		B35C98C5162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; };
+		B35C98C6162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; };
+		B35C98C7162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; };
+		B35C98C8162B3453003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AE162B3453003A1D03 /* TO.m */; };
+		B35C98C9162B3453003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AE162B3453003A1D03 /* TO.m */; };
+		B35C98CA162B3453003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AE162B3453003A1D03 /* TO.m */; };
+		B35C98CB162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; };
+		B35C98CC162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; };
+		B35C98CD162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; };
+		B35C98CE162B3453003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B0162B3453003A1D03 /* TOCocoa.m */; };
+		B35C98CF162B3453003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B0162B3453003A1D03 /* TOCocoa.m */; };
+		B35C98D0162B3453003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B0162B3453003A1D03 /* TOCocoa.m */; };
+		B35C98D1162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; };
+		B35C98D2162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; };
+		B35C98D3162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; };
+		B35C98D4162B3453003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B2162B3453003A1D03 /* TOMath.m */; };
+		B35C98D5162B3453003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B2162B3453003A1D03 /* TOMath.m */; };
+		B35C98D6162B3453003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B2162B3453003A1D03 /* TOMath.m */; };
 		B37699F2162962EA0050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
 		B3769A03162962FA0050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
 		B3769A17162963060050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
@@ -113,18 +113,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B35C9875162B33B9003A1D03 /* TO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TO.h; sourceTree = "<group>"; };
-		B35C9876162B33B9003A1D03 /* TO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TO.m; sourceTree = "<group>"; };
-		B35C9877162B33B9003A1D03 /* TOCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCocoa.h; sourceTree = "<group>"; };
-		B35C9878162B33B9003A1D03 /* TOCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCocoa.m; sourceTree = "<group>"; };
-		B35C9879162B33B9003A1D03 /* TOEval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOEval.h; sourceTree = "<group>"; };
-		B35C987A162B33B9003A1D03 /* TOEval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOEval.m; sourceTree = "<group>"; };
-		B35C987B162B33B9003A1D03 /* TOMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOMath.h; sourceTree = "<group>"; };
-		B35C987C162B33B9003A1D03 /* TOMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOMath.m; sourceTree = "<group>"; };
-		B35C987D162B33B9003A1D03 /* TOMem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOMem.h; sourceTree = "<group>"; };
-		B35C987E162B33B9003A1D03 /* TOMem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOMem.m; sourceTree = "<group>"; };
-		B35C987F162B33B9003A1D03 /* TORead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TORead.h; sourceTree = "<group>"; };
-		B35C9880162B33B9003A1D03 /* TORead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TORead.m; sourceTree = "<group>"; };
+		B35C98A6162B3453003A1D03 /* TOEval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOEval.h; sourceTree = "<group>"; };
+		B35C98A7162B3453003A1D03 /* TOEval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOEval.m; sourceTree = "<group>"; };
+		B35C98A8162B3453003A1D03 /* TOMem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOMem.h; sourceTree = "<group>"; };
+		B35C98A9162B3453003A1D03 /* TOMem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOMem.m; sourceTree = "<group>"; };
+		B35C98AA162B3453003A1D03 /* TORead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TORead.h; sourceTree = "<group>"; };
+		B35C98AB162B3453003A1D03 /* TORead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TORead.m; sourceTree = "<group>"; };
+		B35C98AD162B3453003A1D03 /* TO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TO.h; sourceTree = "<group>"; };
+		B35C98AE162B3453003A1D03 /* TO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TO.m; sourceTree = "<group>"; };
+		B35C98AF162B3453003A1D03 /* TOCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCocoa.h; sourceTree = "<group>"; };
+		B35C98B0162B3453003A1D03 /* TOCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCocoa.m; sourceTree = "<group>"; };
+		B35C98B1162B3453003A1D03 /* TOMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOMath.h; sourceTree = "<group>"; };
+		B35C98B2162B3453003A1D03 /* TOMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOMath.m; sourceTree = "<group>"; };
 		B363EABD1629E570003E80C3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		B37699EE162962EA0050BAD0 /* libTosti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTosti.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37699F1162962EA0050BAD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -226,6 +226,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B35C98A5162B3453003A1D03 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B35C98A6162B3453003A1D03 /* TOEval.h */,
+				B35C98A7162B3453003A1D03 /* TOEval.m */,
+				B35C98A8162B3453003A1D03 /* TOMem.h */,
+				B35C98A9162B3453003A1D03 /* TOMem.m */,
+				B35C98AA162B3453003A1D03 /* TORead.h */,
+				B35C98AB162B3453003A1D03 /* TORead.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B35C98AC162B3453003A1D03 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				B35C98AD162B3453003A1D03 /* TO.h */,
+				B35C98AE162B3453003A1D03 /* TO.m */,
+				B35C98AF162B3453003A1D03 /* TOCocoa.h */,
+				B35C98B0162B3453003A1D03 /* TOCocoa.m */,
+				B35C98B1162B3453003A1D03 /* TOMath.h */,
+				B35C98B2162B3453003A1D03 /* TOMath.m */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		B37699E1162961570050BAD0 = {
 			isa = PBXGroup;
 			children = (
@@ -280,18 +306,8 @@
 		B3769A251629635C0050BAD0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				B35C9875162B33B9003A1D03 /* TO.h */,
-				B35C9876162B33B9003A1D03 /* TO.m */,
-				B35C9877162B33B9003A1D03 /* TOCocoa.h */,
-				B35C9878162B33B9003A1D03 /* TOCocoa.m */,
-				B35C9879162B33B9003A1D03 /* TOEval.h */,
-				B35C987A162B33B9003A1D03 /* TOEval.m */,
-				B35C987B162B33B9003A1D03 /* TOMath.h */,
-				B35C987C162B33B9003A1D03 /* TOMath.m */,
-				B35C987D162B33B9003A1D03 /* TOMem.h */,
-				B35C987E162B33B9003A1D03 /* TOMem.m */,
-				B35C987F162B33B9003A1D03 /* TORead.h */,
-				B35C9880162B33B9003A1D03 /* TORead.m */,
+				B35C98A5162B3453003A1D03 /* Core */,
+				B35C98AC162B3453003A1D03 /* Libs */,
 				B3769AD3162991F40050BAD0 /* Supporting Files */,
 			);
 			path = Library;
@@ -359,12 +375,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35C9882162B33B9003A1D03 /* TO.h in Headers */,
-				B35C9888162B33B9003A1D03 /* TOCocoa.h in Headers */,
-				B35C988E162B33B9003A1D03 /* TOEval.h in Headers */,
-				B35C9894162B33B9003A1D03 /* TOMath.h in Headers */,
-				B35C989A162B33B9003A1D03 /* TOMem.h in Headers */,
-				B35C98A0162B33B9003A1D03 /* TORead.h in Headers */,
+				B35C98B4162B3453003A1D03 /* TOEval.h in Headers */,
+				B35C98BA162B3453003A1D03 /* TOMem.h in Headers */,
+				B35C98C0162B3453003A1D03 /* TORead.h in Headers */,
+				B35C98C6162B3453003A1D03 /* TO.h in Headers */,
+				B35C98CC162B3453003A1D03 /* TOCocoa.h in Headers */,
+				B35C98D2162B3453003A1D03 /* TOMath.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,12 +388,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35C9883162B33B9003A1D03 /* TO.h in Headers */,
-				B35C9889162B33B9003A1D03 /* TOCocoa.h in Headers */,
-				B35C988F162B33B9003A1D03 /* TOEval.h in Headers */,
-				B35C9895162B33B9003A1D03 /* TOMath.h in Headers */,
-				B35C989B162B33B9003A1D03 /* TOMem.h in Headers */,
-				B35C98A1162B33B9003A1D03 /* TORead.h in Headers */,
+				B35C98B5162B3453003A1D03 /* TOEval.h in Headers */,
+				B35C98BB162B3453003A1D03 /* TOMem.h in Headers */,
+				B35C98C1162B3453003A1D03 /* TORead.h in Headers */,
+				B35C98C7162B3453003A1D03 /* TO.h in Headers */,
+				B35C98CD162B3453003A1D03 /* TOCocoa.h in Headers */,
+				B35C98D3162B3453003A1D03 /* TOMath.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,12 +401,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35C9881162B33B9003A1D03 /* TO.h in Headers */,
-				B35C9887162B33B9003A1D03 /* TOCocoa.h in Headers */,
-				B35C988D162B33B9003A1D03 /* TOEval.h in Headers */,
-				B35C9893162B33B9003A1D03 /* TOMath.h in Headers */,
-				B35C9899162B33B9003A1D03 /* TOMem.h in Headers */,
-				B35C989F162B33B9003A1D03 /* TORead.h in Headers */,
+				B35C98B3162B3453003A1D03 /* TOEval.h in Headers */,
+				B35C98B9162B3453003A1D03 /* TOMem.h in Headers */,
+				B35C98BF162B3453003A1D03 /* TORead.h in Headers */,
+				B35C98C5162B3453003A1D03 /* TO.h in Headers */,
+				B35C98CB162B3453003A1D03 /* TOCocoa.h in Headers */,
+				B35C98D1162B3453003A1D03 /* TOMath.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,12 +640,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35C9884162B33B9003A1D03 /* TO.m in Sources */,
-				B35C988A162B33B9003A1D03 /* TOCocoa.m in Sources */,
-				B35C9890162B33B9003A1D03 /* TOEval.m in Sources */,
-				B35C9896162B33B9003A1D03 /* TOMath.m in Sources */,
-				B35C989C162B33B9003A1D03 /* TOMem.m in Sources */,
-				B35C98A2162B33B9003A1D03 /* TORead.m in Sources */,
+				B35C98B6162B3453003A1D03 /* TOEval.m in Sources */,
+				B35C98BC162B3453003A1D03 /* TOMem.m in Sources */,
+				B35C98C2162B3453003A1D03 /* TORead.m in Sources */,
+				B35C98C8162B3453003A1D03 /* TO.m in Sources */,
+				B35C98CE162B3453003A1D03 /* TOCocoa.m in Sources */,
+				B35C98D4162B3453003A1D03 /* TOMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,12 +653,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35C9885162B33B9003A1D03 /* TO.m in Sources */,
-				B35C988B162B33B9003A1D03 /* TOCocoa.m in Sources */,
-				B35C9891162B33B9003A1D03 /* TOEval.m in Sources */,
-				B35C9897162B33B9003A1D03 /* TOMath.m in Sources */,
-				B35C989D162B33B9003A1D03 /* TOMem.m in Sources */,
-				B35C98A3162B33B9003A1D03 /* TORead.m in Sources */,
+				B35C98B7162B3453003A1D03 /* TOEval.m in Sources */,
+				B35C98BD162B3453003A1D03 /* TOMem.m in Sources */,
+				B35C98C3162B3453003A1D03 /* TORead.m in Sources */,
+				B35C98C9162B3453003A1D03 /* TO.m in Sources */,
+				B35C98CF162B3453003A1D03 /* TOCocoa.m in Sources */,
+				B35C98D5162B3453003A1D03 /* TOMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,12 +666,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35C9886162B33B9003A1D03 /* TO.m in Sources */,
-				B35C988C162B33B9003A1D03 /* TOCocoa.m in Sources */,
-				B35C9892162B33B9003A1D03 /* TOEval.m in Sources */,
-				B35C9898162B33B9003A1D03 /* TOMath.m in Sources */,
-				B35C989E162B33B9003A1D03 /* TOMem.m in Sources */,
-				B35C98A4162B33B9003A1D03 /* TORead.m in Sources */,
+				B35C98B8162B3453003A1D03 /* TOEval.m in Sources */,
+				B35C98BE162B3453003A1D03 /* TOMem.m in Sources */,
+				B35C98C4162B3453003A1D03 /* TORead.m in Sources */,
+				B35C98CA162B3453003A1D03 /* TO.m in Sources */,
+				B35C98D0162B3453003A1D03 /* TOCocoa.m in Sources */,
+				B35C98D6162B3453003A1D03 /* TOMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
