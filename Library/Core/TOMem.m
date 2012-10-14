@@ -88,7 +88,7 @@ id const TONil = @"TONil";
 - (void)dumpInto:(NSMutableArray *)array
 {
     NSMutableArray *dump = [[NSMutableArray alloc] init];
-    for (NSString *name in _memory) {
+    for (NSString *name in [_memory.allKeys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)]) {
         id i = [self get:name];
         if (i) {
             [dump addObject:@[name, i]];
