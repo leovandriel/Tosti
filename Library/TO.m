@@ -308,17 +308,22 @@
 
 #pragma mark - Inspection
 
++ (NSArray *)selectorsForObject:(id)object
+{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    unsigned int count = 0;
+    Method *methods = class_copyMethodList(object_getClass(object), &count);
+    for (NSUInteger i = 0; i < count; i++) {
+        [result addObject:NSStringFromSelector(method_getName(methods[i]))];
+    }
+    free(methods);
+    return result;
+}
+
 + (id(^)(id))selectors
 {
     return ^id(id value) {
-        NSMutableArray *result = [[NSMutableArray alloc] init];
-        unsigned int count = 0;
-        Method *methods = class_copyMethodList(object_getClass(value), &count);
-        for (NSUInteger i = 0; i < count; i++) {
-            [result addObject:NSStringFromSelector(method_getName(methods[i]))];
-        }
-        free(methods);
-        return [result sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+        return [[self selectorsForObject:value] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
     };
 }
 
@@ -326,6 +331,32 @@
 {
     return ^id(id value) {
         return class_getSuperclass([value class]);
+    };
+}
+
++ (id(^)(id,id))load
+{
+    return ^id(id target, id mem) {
+        if ([mem isKindOfClass:TOMem.class]) {
+            NSMutableArray *result = [[NSMutableArray alloc] init];
+            for (NSString *selector in [self selectorsForObject:target]) {
+                SEL sel = NSSelectorFromString(selector);
+                NSMethodSignature *signature = [target methodSignatureForSelector:sel];
+                if (signature.numberOfArguments == 2 && !strcmp(signature.methodReturnType, @encode(void(^)(void))) && [target respondsToSelector:sel]) {
+                    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+                    [invocation setSelector:sel];
+                    @try {
+                        [invocation invokeWithTarget:target];
+                        id value = nil;
+                        [invocation getReturnValue:&value];
+                        [mem set:value name:selector];
+                        [result addObject:selector];
+                    } @catch (NSException *exception) {}
+                }
+            }
+            return result;
+        }
+        return nil;
     };
 }
 

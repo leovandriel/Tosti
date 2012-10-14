@@ -40,5 +40,6 @@
 
 + (id(^)(id))selectors;
 + (id(^)(id))super;
++ (id(^)(id, id))load;
 
 @end
