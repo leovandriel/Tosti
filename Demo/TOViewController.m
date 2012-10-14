@@ -46,6 +46,10 @@
     
     _mem = [[TOMem alloc] init];
     [_mem set:self name:@"self"];
+    
+    [_mem run:@"TO.load(_mem,TO)"];
+    [_mem run:@"load(_mem,TOMath)"];
+    [_mem run:@"load(_mem,TOCocoa)"];
 }
 
 - (void)run
