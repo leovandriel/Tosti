@@ -15,6 +15,9 @@ extern id const TONil;
 
 - (id)get:(NSString *)name;
 - (void)set:(id)object name:(NSString *)name;
+- (void)unset:(NSString *)name;
+- (void)clear;
+
 - (NSArray *)dump;
 - (id)run:(NSString *)code;
 - (id)run:(NSString *)code delegate:(id<TODelegate>)delegate;

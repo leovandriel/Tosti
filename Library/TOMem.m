@@ -23,6 +23,7 @@ id const TONil = @"TONil";
     self = [super init];
     if (self) {
         _memory = [[NSMutableDictionary alloc] init];
+        [self set:self name:@"_mem"];
     }
     return self;
 }
@@ -58,6 +59,23 @@ id const TONil = @"TONil";
     BOOL set = !_parent || !![_memory objectForKey:name];
     if (set) [_memory setObject:value forKey:name];
     else [_parent setInternal:value name:name];
+}
+
+- (void)unset:(NSString *)name
+{
+    if (name) [self unsetInternal:name];
+}
+
+- (void)unsetInternal:(NSString *)name
+{
+    BOOL set = !_parent || !![_memory objectForKey:name];
+    if (set) [_memory removeObjectForKey:name];
+    else [_parent unsetInternal:name];
+}
+
+- (void)clear
+{
+    [_memory removeAllObjects];
 }
 
 - (NSArray *)dump

@@ -35,7 +35,9 @@ static NSUInteger const TOStackSize = 100;
 - (id)run
 {
     _abort = NO;
+    [_mem set:self name:@"_eval"];
     id result = [self runStatement:_statement];
+    [_mem unset:@"_eval"];
     _abort = NO;
     return result;
 }
