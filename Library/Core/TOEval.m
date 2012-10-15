@@ -167,6 +167,10 @@ static NSUInteger const TOStackSize = 100;
                     } break;
                     case 's': result = [self evalStatement:value]; break;
                     case 'v': result = value; break;
+                    case 'l': {
+                        SEL s = NSSelectorFromString(value);
+                        result = [[TOValue alloc] initWithBytes:&s objCType:":"];
+                    } break;
                     default: [self logAt:index line:@"Unknown value type '%c'", type]; result = value;
                 }
             } break;
@@ -227,6 +231,7 @@ static NSUInteger const TOStackSize = 100;
                             case 'd': *(double            *)buffer = [arg doubleValue  ]; break;
                             case 'B': *(bool              *)buffer = [arg boolValue    ]; break;
                             case '*': *(char *            *)buffer = (char *)[arg UTF8String]; break;
+                            case ':': *(SEL               *)buffer = NSSelectorFromString(arg); break;
                             case '#': *(__unsafe_unretained id *)buffer = NSClassFromString(arg); break;
                             case '@': *(__unsafe_unretained id *)buffer = arg; break;
                             default: [self logAt:index line:@"Unable to send string argument %@ as type %s (%i)", arg, type, i - 2];
@@ -239,7 +244,7 @@ static NSUInteger const TOStackSize = 100;
                         else [self logAt:index line:@"Unable to send argument with type %s as type %s (%i)", t, type, i - 2];
                     } else if (arg) {
                         switch (type[0]) {
-                            case '*': *(char *            *)buffer = (char *)[[arg description] UTF8String]; break;
+                            case '*': *(char **)buffer = (char *)[[arg description] UTF8String]; break;
                             case '@': case '#': *(__unsafe_unretained id *)buffer = arg; break;
                             default: [self logAt:index line:@"Unable to send argument %@ (%@) as type %s (%i)", arg, [arg class], type, i - 2];
                         }

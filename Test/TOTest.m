@@ -293,4 +293,17 @@
     STAssertEqualObjects(_logs, @"", @"");
 }
 
+- (void)testSelector
+{
+    [self eval:@"x=['a' performSelector:@selector(uppercaseString)]"];
+    STAssertEqualObjects([_mem get:@"x"], @"A", @"");
+    [self eval:@"x=['a' performSelector:@selector(stringByAppendingString:) withObject:'b']"];
+    STAssertEqualObjects([_mem get:@"x"], @"ab", @"");
+    [self eval:@"x=['a' performSelector:@uppercaseString]"];
+    STAssertEqualObjects([_mem get:@"x"], @"A", @"");
+    [self eval:@"x=[@['b' 'a'] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)]"];
+    id x = @[@"a",@"b"]; STAssertEqualObjects([_mem get:@"x"], x, @"");
+    STAssertEqualObjects(_logs, @"", @"");
+}
+
 @end

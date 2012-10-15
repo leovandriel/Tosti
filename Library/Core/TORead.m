@@ -92,7 +92,7 @@ static NSString *TOTypeReturn       = @"e";
         case '{': result = [self scope]; break;
         case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9':
         case '.': case '"': case '\'': case '@': result = [self value]; break;
-        default: result = [self name]; break;
+        default: result = [self nameWith:'_']; break;
     }
     [self space];
     if (result && strncmp(_chars + _index - 1, " [", 2)) {
@@ -112,7 +112,7 @@ static NSString *TOTypeReturn       = @"e";
                     } else [self logExpect:@"expecting statement to assign"];
                 } break;
                 case '.': {
-                    NSString *selector = [self name]; [self space];
+                    NSString *selector = [self nameWith:'\0']; [self space];
                     if (selector.length) result = @[TOTypeMethod, @(start), result, selector];
                     else [self logExpect:@"expecting dot selector"];
                 } break;
@@ -145,7 +145,7 @@ static NSString *TOTypeReturn       = @"e";
     for (char c = [self chars:":]"];; c = [self chars:":]"]) {
         [self space];
         if (c == '\0' && _chars[_index]) {
-            NSString *n = [self name];
+            NSString *n = [self nameWith:'\0'];
             if (n.length) {
                 [selector appendString:n];
             } else {
@@ -256,6 +256,11 @@ static NSString *TOTypeReturn       = @"e";
         if (i || [result isEqualToString:@"0"]) return @[TOTypeValue, @(start), @"v", @(i)];
         if ([result isEqualToString:@"YES"]) return @[TOTypeValue, @(start), @"v", @YES];
         if ([result isEqualToString:@"NO"]) return @[TOTypeValue, @(start), @"v", @NO];
+        if ([result isEqualToString:@"selector"]) {
+            [self char:'(']; [self space];
+            NSString *selector = [self nameWith:':']; [self char:')'];
+            return @[TOTypeValue, @(start), @"l", selector];
+        }
         return @[TOTypeValue, @(start), @"v", result];
     }
     [self logExpect:@"expecting value"];
@@ -306,11 +311,11 @@ static NSString *TOTypeReturn       = @"e";
     return YES;
 }
 
-- (NSString *)name
+- (NSString *)nameWith:(char)separator
 {
     const char *s = _chars + _index;
     for (char c = *s; c; c = *++s) {
-        if (('a' > c || c > 'z') && ('A' > c || c > 'Z') && ('0' > c || c > '9') && c != '_') break;
+        if (('a' > c || c > 'z') && ('A' > c || c > 'Z') && ('0' > c || c > '9') && c != separator) break;
     }
     NSUInteger length = s - _chars - _index;
     if (length) {
@@ -327,7 +332,7 @@ static NSString *TOTypeReturn       = @"e";
     for (char c = [self char:until]; _chars[_index] && c != until; c = [self char:until]) {
         if (names) {
             [self keyword:"id"]; [self space];
-            NSString *name = [self name];
+            NSString *name = [self nameWith:'_'];
             if (name.length) {
                 [result addObject:name]; [self space];
             } else {
