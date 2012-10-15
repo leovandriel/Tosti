@@ -94,7 +94,7 @@ static NSUInteger const TOStackSize = 100;
                 NSArray *arguments = statement.count > 3 ? statement[3] : nil;
                 NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:arguments.count];
                 for (id argument in arguments) {
-                    id value = [self evalStatement:value == TONil ? nil : argument];
+                    id value = [self evalStatement:argument == TONil ? nil : argument];
                     [values addObject:value ? value : TONil];
                 }
                 id (^block)(id, id, id, id) = (id(^)(id, id, id, id))target;
@@ -113,7 +113,7 @@ static NSUInteger const TOStackSize = 100;
                 NSArray *arguments = statement.count > 4 ? statement[4] : nil;
                 NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:arguments.count];
                 for (id argument in arguments) {
-                    id value = [self evalStatement:(value == TONil ? nil : argument)];
+                    id value = [self evalStatement:argument == TONil ? nil : argument];
                     [values addObject:value ? value : TONil];
                 }
                 result = [self performOnTarget:target selectorString:selector arguments:values index:index];
