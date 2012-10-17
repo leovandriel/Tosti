@@ -95,9 +95,11 @@ static NSString *TOTypeReturn       = @"e";
         default: result = [self nameWith:'_']; break;
     }
     [self space];
-    if (result && strncmp(_chars + _index - 1, " [", 2)) {
-        char d = [self chars:"[(=."]; [self space];
-        while (d) {
+    if (result) {
+        for (char d = 1; d; ) {
+            const char *s = _chars + _index - 1;
+            if (!strncmp(s, " [", 2) || !strncmp(s, " .", 2)) break;
+            d = [self chars:"[(=."]; [self space];
             switch (d) {
                 case '=': {
                     id statement = [self statement];
@@ -127,8 +129,6 @@ static NSString *TOTypeReturn       = @"e";
                     else [self logExpect:@"expecting index"];
                 }
             }
-            if (!strcmp(_chars + _index - 1, " [")) break;
-            d = [self chars:"[(=."]; [self space];
         }
         if ([result isKindOfClass:NSString.class]) result = @[TOTypeReference, @(start), result];
     }

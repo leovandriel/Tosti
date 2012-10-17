@@ -60,13 +60,10 @@
 		B37699F2162962EA0050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
 		B3769A03162962FA0050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
 		B3769A17162963060050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
-		B3769A3C162969620050BAD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A3B162969620050BAD0 /* UIKit.framework */; };
 		B3769A3D162969620050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
-		B3769A3F162969620050BAD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A3E162969620050BAD0 /* CoreGraphics.framework */; };
 		B3769A6516296A810050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699EE162962EA0050BAD0 /* libTosti.a */; };
 		B3769A6C16296BDF0050BAD0 /* NWLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A6B16296BDF0050BAD0 /* NWLogging.framework */; };
 		B3769A8C16298E200050BAD0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A8B16298E200050BAD0 /* SenTestingKit.framework */; };
-		B3769A8D16298E200050BAD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A3B162969620050BAD0 /* UIKit.framework */; };
 		B3769A8E16298E200050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
 		B3769AA216298E310050BAD0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A8B16298E200050BAD0 /* SenTestingKit.framework */; };
 		B3769AA316298E310050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
@@ -76,8 +73,6 @@
 		B3769AC616298EC90050BAD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AB516298E890050BAD0 /* main.m */; };
 		B3769AC716298EC90050BAD0 /* TOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AB716298E890050BAD0 /* TOAppDelegate.m */; };
 		B3769AC816298EC90050BAD0 /* TOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769ABB16298E890050BAD0 /* TOViewController.m */; };
-		B3769ACB16298F9B0050BAD0 /* TOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769ACA16298F9B0050BAD0 /* TOTest.m */; };
-		B3769ACC16298F9B0050BAD0 /* TOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769ACA16298F9B0050BAD0 /* TOTest.m */; };
 		B3769ACF1629918E0050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699EE162962EA0050BAD0 /* libTosti.a */; };
 		B3769AD2162991960050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A01162962FA0050BAD0 /* libTosti.a */; };
 		B3769AD8162995320050BAD0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AD4162995320050BAD0 /* Icon-72.png */; };
@@ -86,6 +81,24 @@
 		B3769ADB162995320050BAD0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AD7162995320050BAD0 /* Icon@2x.png */; };
 		B3769AF41629981C0050BAD0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769AF31629981C0050BAD0 /* libz.dylib */; };
 		B3769AF6162998210050BAD0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769AF5162998210050BAD0 /* MessageUI.framework */; };
+		B3AFDADC162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; };
+		B3AFDADD162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; };
+		B3AFDADE162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; };
+		B3AFDADF162F2D2E0050D1F8 /* TOValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDADB162F2D2E0050D1F8 /* TOValue.m */; };
+		B3AFDAE0162F2D2E0050D1F8 /* TOValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDADB162F2D2E0050D1F8 /* TOValue.m */; };
+		B3AFDAE1162F2D2E0050D1F8 /* TOValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDADB162F2D2E0050D1F8 /* TOValue.m */; };
+		B3AFDAE5162F35380050D1F8 /* TOTestCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAE4162F35380050D1F8 /* TOTestCocoa.m */; };
+		B3AFDAE6162F35380050D1F8 /* TOTestCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAE4162F35380050D1F8 /* TOTestCocoa.m */; };
+		B3AFDAE8162F364C0050D1F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */; };
+		B3AFDAE9162F36520050D1F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */; };
+		B3AFDAEA162F36530050D1F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */; };
+		B3AFDAEC162F36600050D1F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAEB162F36600050D1F8 /* UIKit.framework */; };
+		B3AFDAED162F36680050D1F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAEB162F36600050D1F8 /* UIKit.framework */; };
+		B3AFDAEE162F36680050D1F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAEB162F36600050D1F8 /* UIKit.framework */; };
+		B3AFDAF1162F37670050D1F8 /* TOTestCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF0162F37670050D1F8 /* TOTestCore.m */; };
+		B3AFDAF2162F37670050D1F8 /* TOTestCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF0162F37670050D1F8 /* TOTestCore.m */; };
+		B3AFDAF5162F37990050D1F8 /* TOTestIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */; };
+		B3AFDAF6162F37990050D1F8 /* TOTestIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,8 +149,6 @@
 		B3769A16162963060050BAD0 /* TostiCocoaFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TostiCocoaFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3769A261629635C0050BAD0 /* TostiCocoaFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiCocoaFramework-Info.plist"; sourceTree = "<group>"; };
 		B3769A39162969620050BAD0 /* TostiTouchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TostiTouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3769A3B162969620050BAD0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B3769A3E162969620050BAD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		B3769A6B16296BDF0050BAD0 /* NWLogging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NWLogging.framework; path = Frameworks/NWLogging.framework; sourceTree = "<group>"; };
 		B3769A8A16298E200050BAD0 /* TostiTouchTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TostiTouchTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3769A8B16298E200050BAD0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -154,13 +165,19 @@
 		B3769ABB16298E890050BAD0 /* TOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOViewController.m; sourceTree = "<group>"; };
 		B3769ABD16298E890050BAD0 /* TostiCocoaTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiCocoaTest-Info.plist"; sourceTree = "<group>"; };
 		B3769ABF16298E890050BAD0 /* TostiTouchTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiTouchTest-Info.plist"; sourceTree = "<group>"; };
-		B3769ACA16298F9B0050BAD0 /* TOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTest.m; sourceTree = "<group>"; };
 		B3769AD4162995320050BAD0 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		B3769AD5162995320050BAD0 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		B3769AD6162995320050BAD0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		B3769AD7162995320050BAD0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B3769AF31629981C0050BAD0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		B3769AF5162998210050BAD0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		B3AFDADA162F2D2E0050D1F8 /* TOValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOValue.h; sourceTree = "<group>"; };
+		B3AFDADB162F2D2E0050D1F8 /* TOValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOValue.m; sourceTree = "<group>"; };
+		B3AFDAE4162F35380050D1F8 /* TOTestCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTestCocoa.m; sourceTree = "<group>"; };
+		B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B3AFDAEB162F36600050D1F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B3AFDAF0162F37670050D1F8 /* TOTestCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTestCore.m; sourceTree = "<group>"; };
+		B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTestIntegration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,12 +209,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3AFDAEC162F36600050D1F8 /* UIKit.framework in Frameworks */,
+				B3AFDAE8162F364C0050D1F8 /* CoreGraphics.framework in Frameworks */,
 				B3769AF6162998210050BAD0 /* MessageUI.framework in Frameworks */,
 				B3769AF41629981C0050BAD0 /* libz.dylib in Frameworks */,
 				B3769A6516296A810050BAD0 /* libTosti.a in Frameworks */,
-				B3769A3C162969620050BAD0 /* UIKit.framework in Frameworks */,
 				B3769A3D162969620050BAD0 /* Foundation.framework in Frameworks */,
-				B3769A3F162969620050BAD0 /* CoreGraphics.framework in Frameworks */,
 				B3769A6C16296BDF0050BAD0 /* NWLogging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,8 +225,9 @@
 			files = (
 				B3769ACF1629918E0050BAD0 /* libTosti.a in Frameworks */,
 				B3769A8C16298E200050BAD0 /* SenTestingKit.framework in Frameworks */,
-				B3769A8D16298E200050BAD0 /* UIKit.framework in Frameworks */,
 				B3769A8E16298E200050BAD0 /* Foundation.framework in Frameworks */,
+				B3AFDAEA162F36530050D1F8 /* CoreGraphics.framework in Frameworks */,
+				B3AFDAEE162F36680050D1F8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +238,8 @@
 				B3769AD2162991960050BAD0 /* libTosti.a in Frameworks */,
 				B3769AA216298E310050BAD0 /* SenTestingKit.framework in Frameworks */,
 				B3769AA316298E310050BAD0 /* Cocoa.framework in Frameworks */,
+				B3AFDAE9162F36520050D1F8 /* CoreGraphics.framework in Frameworks */,
+				B3AFDAED162F36680050D1F8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +255,8 @@
 				B35C98A9162B3453003A1D03 /* TOMem.m */,
 				B35C98AA162B3453003A1D03 /* TORead.h */,
 				B35C98AB162B3453003A1D03 /* TORead.m */,
+				B3AFDADA162F2D2E0050D1F8 /* TOValue.h */,
+				B3AFDADB162F2D2E0050D1F8 /* TOValue.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -285,9 +307,9 @@
 				B3769A6B16296BDF0050BAD0 /* NWLogging.framework */,
 				B37699F1162962EA0050BAD0 /* Foundation.framework */,
 				B3769A02162962FA0050BAD0 /* Cocoa.framework */,
-				B3769A3B162969620050BAD0 /* UIKit.framework */,
-				B3769A3E162969620050BAD0 /* CoreGraphics.framework */,
 				B3769A8B16298E200050BAD0 /* SenTestingKit.framework */,
+				B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */,
+				B3AFDAEB162F36600050D1F8 /* UIKit.framework */,
 				B3769A04162962FA0050BAD0 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -326,7 +348,9 @@
 		B3769ABC16298E890050BAD0 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				B3769ACA16298F9B0050BAD0 /* TOTest.m */,
+				B3AFDAE4162F35380050D1F8 /* TOTestCocoa.m */,
+				B3AFDAF0162F37670050D1F8 /* TOTestCore.m */,
+				B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */,
 				B3769AC116298E980050BAD0 /* Supporting Files */,
 			);
 			path = Test;
@@ -381,6 +405,7 @@
 				B35C98C6162B3453003A1D03 /* TO.h in Headers */,
 				B35C98CC162B3453003A1D03 /* TOCocoa.h in Headers */,
 				B35C98D2162B3453003A1D03 /* TOMath.h in Headers */,
+				B3AFDADD162F2D2E0050D1F8 /* TOValue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +419,7 @@
 				B35C98C7162B3453003A1D03 /* TO.h in Headers */,
 				B35C98CD162B3453003A1D03 /* TOCocoa.h in Headers */,
 				B35C98D3162B3453003A1D03 /* TOMath.h in Headers */,
+				B3AFDADE162F2D2E0050D1F8 /* TOValue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +433,7 @@
 				B35C98C5162B3453003A1D03 /* TO.h in Headers */,
 				B35C98CB162B3453003A1D03 /* TOCocoa.h in Headers */,
 				B35C98D1162B3453003A1D03 /* TOMath.h in Headers */,
+				B3AFDADC162F2D2E0050D1F8 /* TOValue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +673,7 @@
 				B35C98C8162B3453003A1D03 /* TO.m in Sources */,
 				B35C98CE162B3453003A1D03 /* TOCocoa.m in Sources */,
 				B35C98D4162B3453003A1D03 /* TOMath.m in Sources */,
+				B3AFDADF162F2D2E0050D1F8 /* TOValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +687,7 @@
 				B35C98C9162B3453003A1D03 /* TO.m in Sources */,
 				B35C98CF162B3453003A1D03 /* TOCocoa.m in Sources */,
 				B35C98D5162B3453003A1D03 /* TOMath.m in Sources */,
+				B3AFDAE0162F2D2E0050D1F8 /* TOValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +701,7 @@
 				B35C98CA162B3453003A1D03 /* TO.m in Sources */,
 				B35C98D0162B3453003A1D03 /* TOCocoa.m in Sources */,
 				B35C98D6162B3453003A1D03 /* TOMath.m in Sources */,
+				B3AFDAE1162F2D2E0050D1F8 /* TOValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,7 +719,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3769ACB16298F9B0050BAD0 /* TOTest.m in Sources */,
+				B3AFDAE5162F35380050D1F8 /* TOTestCocoa.m in Sources */,
+				B3AFDAF1162F37670050D1F8 /* TOTestCore.m in Sources */,
+				B3AFDAF5162F37990050D1F8 /* TOTestIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,7 +729,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3769ACC16298F9B0050BAD0 /* TOTest.m in Sources */,
+				B3AFDAE6162F35380050D1F8 /* TOTestCocoa.m in Sources */,
+				B3AFDAF2162F37670050D1F8 /* TOTestCore.m in Sources */,
+				B3AFDAF6162F37990050D1F8 /* TOTestIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,7 +1114,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1117,7 +1154,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

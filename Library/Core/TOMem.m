@@ -32,8 +32,9 @@ id const TONil = @"TONil";
 {
     if (name) {
         id result = [self getInternal:name];
+        if (!result) result = NSClassFromString(name);
+        if (!result) result = NSProtocolFromString(name);
         if (result == TONil) result = nil;
-        else if (!result) result = NSClassFromString(name);
         return result;
     }
     return nil;
@@ -135,32 +136,3 @@ id const TONil = @"TONil";
 }
 
 @end
-
-
-@implementation TOValue {
-    NSValue *value;
-}
-
-- (id)initWithBytes:(const void *)bytes objCType:(const char *)type
-{
-    self = [super init];
-    if (self) {
-        value = [[NSValue alloc] initWithBytes:bytes objCType:type];
-    }
-    return self;
-}
-- (void)getValue:(void *)bytes
-{
-    [value getValue:bytes];
-}
-- (const char *)objCType
-{
-    return [value objCType];
-}
-- (NSString *)description
-{
-    return [value description];
-}
-
-@end
-

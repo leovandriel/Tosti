@@ -158,12 +158,12 @@
     @"  [self help];\n"
     @"Feel free to try more exotic code, but avoid the pure C stuff like if, for, +, or *.\n"
     @"Some handy keys:\n"
-    @"  <tab> parse only\n"
     @"  § previous code\n"
     @"  ± next code\n"
     @"  ` dump memory\n"
     @"  ~ abort running code\n"
     @"  <enter> run code\n"
+    @"  <tab> parse only\n"
     @"Remember to checkout README.md";
 }
 

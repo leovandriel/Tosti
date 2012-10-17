@@ -2,7 +2,6 @@
 //  TOCocoa.h
 //  Tosti
 //
-//  Created by Leo on 10/14/12.
 //  Copyright (c) 2012 Tosti. All rights reserved.
 //
 
@@ -10,10 +9,24 @@
 
 @interface TOCocoa : NSObject
 
++ (id(^)(id))NSStringFromClass;
++ (id(^)(id))NSClassFromString;
++ (id(^)(id))NSStringFromSelector;
++ (id(^)(id))NSSelectorFromString;
++ (id(^)(id))NSStringFromProtocol;
++ (id(^)(id))NSProtocolFromString;
++ (id(^)(id))NSLocalizedString;
++ (id(^)(id,...))NSLog;
++ (id(^)(id,id))NSMakeRange;
+
 + (id(^)(id,id,id,id))CGRectMake;
 + (id(^)(id,id))CGSizeMake;
-+ (id(^)(id))NSStringFromClass;
++ (id(^)(id,id,id,id))UIEdgeInsetsMake;
+
 + (id(^)(id,id,id))dispatch_after;
 + (id(^)(id,id))dispatch_async;
++ (id(^)(id,id))dispatch_sync;
++ (id(^)())dispatch_get_main_queue;
++ (id(^)(id))dispatch_get_global_queue;
 
 @end

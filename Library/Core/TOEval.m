@@ -7,6 +7,7 @@
 
 #import "TOEval.h"
 #import "TOMem.h"
+#import "TOValue.h"
 
 
 static NSUInteger const TOStackSize = 100;
@@ -77,11 +78,10 @@ static NSUInteger const TOStackSize = 100;
             case 'b': { // block
                 NSArray *scope = statement.count > 2 ? statement[2] : nil;
                 NSArray *arguments = statement.count > 3 ? statement[3] : nil;
-                id(^block)(id, id, id, id) = ^(__unsafe_unretained id a, __unsafe_unretained id b, __unsafe_unretained id c, __unsafe_unretained id d){
-                    if (arguments.count > 0) [_mem set:a name:arguments[0]];
-                    if (arguments.count > 1) [_mem set:b name:arguments[1]];
-                    if (arguments.count > 2) [_mem set:c name:arguments[2]];
-                    if (arguments.count > 3) [_mem set:d name:arguments[3]];
+                id(^block)(id, id, id, id, id, id, id, id) = ^(__unsafe_unretained id v0, __unsafe_unretained id v1, __unsafe_unretained id v2, __unsafe_unretained id v3, __unsafe_unretained id v4, __unsafe_unretained id v5, __unsafe_unretained id v6, __unsafe_unretained id v7){
+#define TO_EIGHT(__d,__e) __d(0) __e __d(1) __e __d(2) __e __d(3) __e __d(4) __e __d(5) __e __d(6) __e __d(7)
+#define TO_BLOCK_A(__i) if (arguments.count > __i) [_mem set:v0 name:arguments[__i]]
+                    TO_EIGHT(TO_BLOCK_A, ;);
                     return [self evalStatement:scope];
                 };
                 result = [block copy];
@@ -97,12 +97,10 @@ static NSUInteger const TOStackSize = 100;
                     id value = [self evalStatement:argument == TONil ? nil : argument];
                     [values addObject:value ? value : TONil];
                 }
-                id (^block)(id, id, id, id) = (id(^)(id, id, id, id))target;
-                id a = values.count > 0 && values[0] != TONil ? values[0] : nil;
-                id b = values.count > 1 && values[1] != TONil ? values[1] : nil;
-                id c = values.count > 2 && values[2] != TONil ? values[2] : nil;
-                id d = values.count > 3 && values[3] != TONil ? values[3] : nil;
-                if (block) result = block(a, b, c, d);
+                id (^block)(id, id, id, id, id, id, id, id) = (id(^)(id, id, id, id, id, id, id, id))target;
+#define TO_BLOCK_B(__i) id v##__i = values.count > __i && values[__i] != TONil ? values[__i] : nil
+                TO_EIGHT(TO_BLOCK_B, ;);
+                if (block) result = block(v0, v1, v2, v3, v4, v5, v6, v7);
             } break;
             case 'm': { // method
                 id target = statement.count > 2 ? statement[2]: nil;

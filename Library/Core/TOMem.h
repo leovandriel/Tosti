@@ -27,13 +27,6 @@ extern id const TONil;
 @end
 
 
-@interface TOValue : NSObject
-- (id)initWithBytes:(const void *)bytes objCType:(const char *)type;
-- (void)getValue:(void *)bytes;
-- (const char *)objCType;
-@end
-
-
 @protocol TODelegate <NSObject>
 
 - (void)log:(NSString *)string;
