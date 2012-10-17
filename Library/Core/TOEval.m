@@ -124,9 +124,13 @@ static NSUInteger const TOStackSize = 100;
                 else if ([target isKindOfClass:NSString.class]) target = [_mem get:target];
                 else [self logAt:index line:@"Unknown reference target type '%@'", target];
                 if (statement.count > 3) {
-                    id index = [self evalStatement:statement[3]];
-                    if ([target isKindOfClass:NSArray.class]) result = [target objectAtIndex:[index unsignedIntegerValue]];
-                    else if ([target isKindOfClass:NSDictionary.class]) result = [target objectForKey:index];
+                    id sub = [self evalStatement:statement[3]];
+                    if ([target isKindOfClass:NSArray.class]) {
+                        NSUInteger i = [sub unsignedIntegerValue];
+                        if (i < [target count]) result = [target objectAtIndex:i];
+                        else [self logAt:index line:@"Index out-of-bounds '%@'", sub];
+                    }
+                    else if ([target isKindOfClass:NSDictionary.class]) result = [target objectForKey:sub];
                 } else result = target;
             } break;
             case 's': { // scope
