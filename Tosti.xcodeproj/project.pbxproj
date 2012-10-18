@@ -99,6 +99,7 @@
 		B3AFDAF2162F37670050D1F8 /* TOTestCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF0162F37670050D1F8 /* TOTestCore.m */; };
 		B3AFDAF5162F37990050D1F8 /* TOTestIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */; };
 		B3AFDAF6162F37990050D1F8 /* TOTestIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */; };
+		B3E9D800162FE823001EF37C /* TOConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D7FF162FE823001EF37C /* TOConsoleController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,8 @@
 		B3AFDAEB162F36600050D1F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B3AFDAF0162F37670050D1F8 /* TOTestCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTestCore.m; sourceTree = "<group>"; };
 		B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTestIntegration.m; sourceTree = "<group>"; };
+		B3E9D7FE162FE823001EF37C /* TOConsoleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOConsoleController.h; sourceTree = "<group>"; };
+		B3E9D7FF162FE823001EF37C /* TOConsoleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOConsoleController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +343,8 @@
 			children = (
 				B3769ABA16298E890050BAD0 /* TOViewController.h */,
 				B3769ABB16298E890050BAD0 /* TOViewController.m */,
+				B3E9D7FE162FE823001EF37C /* TOConsoleController.h */,
+				B3E9D7FF162FE823001EF37C /* TOConsoleController.m */,
 				B3769AC216298EA50050BAD0 /* Supporting Files */,
 			);
 			path = Demo;
@@ -712,6 +717,7 @@
 				B3769AC616298EC90050BAD0 /* main.m in Sources */,
 				B3769AC716298EC90050BAD0 /* TOAppDelegate.m in Sources */,
 				B3769AC816298EC90050BAD0 /* TOViewController.m in Sources */,
+				B3E9D800162FE823001EF37C /* TOConsoleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

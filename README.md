@@ -59,7 +59,8 @@ Or how things can go wrong at runtime:
 In this demo app, the view controller has been assigned to `self`:
 
     self.class
-    console=self.view.subviews[0] console.textColor=UIColor.greenColor
+    console=self.delegate.view.subviews[0]
+    console.textColor=UIColor.greenColor
     frame = console.frame
     dispatch_async(^{console.frame = CGRectMake(10, 10, 100, 100)})
     dispatch_async(^{console.frame = frame})

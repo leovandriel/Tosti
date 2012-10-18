@@ -5,8 +5,8 @@
 //  Copyright (c) 2012 Tosti. All rights reserved.
 //
 
-#import "TOMem.h"
+#import "TOConsoleController.h"
 
-@interface TOViewController : UIViewController <UITextViewDelegate, TODelegate>
+@interface TOViewController : UIViewController <UITextViewDelegate, TOConsoleTextDelegate>
 
 @end
