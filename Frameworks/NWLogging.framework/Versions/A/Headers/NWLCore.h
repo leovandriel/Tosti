@@ -30,21 +30,23 @@ extern "C" {
 #define NWL_STR_(_a) #_a
 
 #ifdef NWL_LIB
-    #define NWL_ACTIVE 1
-    #define NWL_LIB_STR NWL_STR(NWL_LIB)
+
+#define NWL_ACTIVE 1
+#define NWL_LIB_STR NWL_STR(NWL_LIB)
+
 #else
-    #if DEBUG
-        #define NWL_ACTIVE 1
-    #else
-        #define NWL_ACTIVE 0
-    #endif
-    #define NWL_LIB_STR NULL
+
+#if DEBUG
+#define NWL_ACTIVE 1
+#else
+#define NWL_ACTIVE 0
+#endif
+#define NWL_LIB_STR NULL
+
 #endif
 
 
 #pragma mark - Common logging operations
-
-#if NWL_ACTIVE
 
 /** Log directly, bypasses all filter and forwards directly to all printers. */
 #define NWLog(_format, ...)                      NWLLogWithoutFilter(NULL, NWL_LIB_STR, _format, ##__VA_ARGS__)
@@ -60,54 +62,48 @@ extern "C" {
 
 /** Log on an 'warn' tag if the condition is false. */
 #define NWLogWarnIfNot(_condition, _format, ...) do {if (!(_condition)) NWLLogWithFilter("warn", NWL_LIB_STR, _format, ##__VA_ARGS__);} while (0)
-#define NWAssert(_condition, _format, ...)       NWLogWarnIfNot(_condition, _format, ##__VA_ARGS__)
 
 /** Log error description on the 'warn' tag if error is not nil. */
-#define NWLogWarnIfError(_error)                 do {if(_error) NWLLogWithFilter("warn", NWL_LIB_STR, @"Caught: %@", _error);} while (0)
-#define NWError(_error)                          NWLogWarnIfError(_error)
+#define NWLogWarnIfError(_error)                 do {if((_error)) NWLLogWithFilter("warn", NWL_LIB_STR, @"Caught: %@", (_error));} while (0)
 
 /** Log on a custom tag, which can be activated using NWLPrintTag(tag). */
 #define NWLogTag(_tag, _format, ...)             NWLLogWithFilter((#_tag), NWL_LIB_STR, _format, ##__VA_ARGS__)
 
-#else
-
-#define NWLog(_format, ...)
-#define NWLogDbug(_format, ...)
-#define NWLogInfo(_format, ...)
-#define NWLogWarn(_format, ...)
-#define NWLogWarnIfNot(_condition, _format, ...) do {break; if (_condition) {}} while (0)
-#define NWAssert(_condition, _format, ...)       do {break; if (_condition) {}} while (0)
-#define NWLogWarnIfError(_error)
-#define NWError(_error)
-#define NWLogTag(_tag, _format, ...)
-
-#endif
+/** Convenient assert and error macros. */
+#define NWAssert(_condition)                     NWLogWarnIfNot((_condition), @"Expected condition: "#_condition)
+#define NWAssertMainThread()                     NWLogWarnIfNot(_NWL_MAIN_THREAD_, @"Expected running on main thread")
+#define NWParameterAssert(_condition)            NWLogWarnIfNot((_condition), @"Expected parameter: "#_condition)
+#define NWError(_error)                          NWLogWarnIfError((_error))
 
 
 #pragma mark - Logging macros
 
 // ARC helper
 #if __has_feature(objc_arc)
-    #define _NWL_BRIDGE_ __bridge
+#define _NWL_BRIDGE_ __bridge
 #else
-    #define _NWL_BRIDGE_
+#define _NWL_BRIDGE_
 #endif
 
 // C/Objective-C support
 #ifdef __OBJC__
-    #define _NWL_CFSTRING_(_str) ((_NWL_BRIDGE_ CFStringRef)_str)
-    #define _NWL_EXCEPTION_(_msg) [NSException raise:@"NWLogging" format:@"%@", _msg]
-    #define _NWL_ASSERT_(_msg) NSCAssert1(NO, @"%@", _msg)
-    #define _NWL_LOG_(_msg, _fmt, ...) NSLog(_fmt, ##__VA_ARGS__)
+#define _NWL_CFSTRING_(_str) ((_NWL_BRIDGE_ CFStringRef)_str)
+#define _NWL_EXCEPTION_(_msg) [NSException raise:@"NWLogging" format:@"%@", _msg]
+#define _NWL_ASSERT_(_msg) NSCAssert1(NO, @"%@", _msg)
+#define _NWL_LOG_(_msg, _fmt, ...) NSLog(_fmt, ##__VA_ARGS__)
+#define _NWL_MAIN_THREAD_ [NSThread isMainThread]
 #else // __OBJC__
-    #define _NWL_CFSTRING_(_str) CFSTR(_str)
-    #define _NWL_EXCEPTION_(_msg) CFShow(_msg)
-    #define _NWL_ASSERT_(_msg) assert(false)
-    #define _NWL_LOG_(_msg, _fmt, ...) CFShow(_msg)
+#define _NWL_CFSTRING_(_str) CFSTR(_str)
+#define _NWL_EXCEPTION_(_msg) CFShow(_msg)
+#define _NWL_ASSERT_(_msg) assert(false)
+#define _NWL_LOG_(_msg, _fmt, ...) CFShow(_msg)
+#define _NWL_MAIN_THREAD_ (dispatch_get_main_queue() == dispatch_get_current_queue())
 #endif // __OBJC__
 
 // Misc helper macros
 #define _NWL_FILE_ (strrchr((__FILE__), '/') + 1)
+
+#if NWL_ACTIVE
 
 /** Forwards context and formatted log line to printers. */
 #define NWLLogWithoutFilter(_tag, _lib, _fmt, ...) NWLLogWithoutFilter_(_tag, _lib, _fmt, ##__VA_ARGS__)
@@ -136,7 +132,14 @@ extern "C" {
         }\
     } while (0)
 
+#else
 
+#define NWLLogWithoutFilter(_tag, _lib, _fmt, ...)
+#define NWLLogWithFilter(_tag, _lib, _fmt, ...) 
+
+#endif
+    
+    
 #pragma mark - Type definitions
 
 /** Types of context properties to filter on */
