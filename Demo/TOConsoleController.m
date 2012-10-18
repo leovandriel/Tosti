@@ -120,7 +120,7 @@
             }
         }
     }
-    [_history removeLastObject]; [_history addObject:_delegate.input];
+    [_history removeLastObject]; [_history addObject:[_delegate.input stringByAppendingString:text]];
     return YES;
 }
 
