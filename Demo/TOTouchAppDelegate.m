@@ -1,15 +1,15 @@
 //
-//  TOAppDelegate.m
+//  TOTouchAppDelegate.m
 //  Tosti
 //
 //  Copyright (c) 2012 Tosti. All rights reserved.
 //
 
-#import "TOAppDelegate.h"
+#import "TOTouchAppDelegate.h"
 #import "TOViewController.h"
 
 
-@implementation TOAppDelegate
+@implementation TOTouchAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

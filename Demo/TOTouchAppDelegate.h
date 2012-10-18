@@ -1,11 +1,11 @@
 //
-//  TOAppDelegate.h
+//  TOTouchAppDelegate.h
 //  Tosti
 //
 //  Copyright (c) 2012 Tosti. All rights reserved.
 //
 
-@interface TOAppDelegate : UIResponder <UIApplicationDelegate>
+@interface TOTouchAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

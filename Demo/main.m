@@ -5,11 +5,13 @@
 //  Copyright (c) 2012 Tosti. All rights reserved.
 //
 
-#import "TOAppDelegate.h"
-
 int main(int argc, char *argv[])
 {
+#if TARGET_OS_IPHONE
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TOAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, @"TOTouchAppDelegate");
     }
+#else
+    return NSApplicationMain(argc, (const char **)argv);
+#endif
 }

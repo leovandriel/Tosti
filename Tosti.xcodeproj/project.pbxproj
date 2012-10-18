@@ -23,43 +23,30 @@
 /* Begin PBXBuildFile section */
 		B35C98B3162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; };
 		B35C98B4162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; };
-		B35C98B5162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; };
 		B35C98B6162B3453003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A7162B3453003A1D03 /* TOEval.m */; };
 		B35C98B7162B3453003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A7162B3453003A1D03 /* TOEval.m */; };
-		B35C98B8162B3453003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A7162B3453003A1D03 /* TOEval.m */; };
 		B35C98B9162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; };
 		B35C98BA162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; };
-		B35C98BB162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; };
 		B35C98BC162B3453003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A9162B3453003A1D03 /* TOMem.m */; };
 		B35C98BD162B3453003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A9162B3453003A1D03 /* TOMem.m */; };
-		B35C98BE162B3453003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A9162B3453003A1D03 /* TOMem.m */; };
 		B35C98BF162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; };
 		B35C98C0162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; };
-		B35C98C1162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; };
 		B35C98C2162B3453003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AB162B3453003A1D03 /* TORead.m */; };
 		B35C98C3162B3453003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AB162B3453003A1D03 /* TORead.m */; };
-		B35C98C4162B3453003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AB162B3453003A1D03 /* TORead.m */; };
 		B35C98C5162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; };
 		B35C98C6162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; };
-		B35C98C7162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; };
 		B35C98C8162B3453003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AE162B3453003A1D03 /* TO.m */; };
 		B35C98C9162B3453003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AE162B3453003A1D03 /* TO.m */; };
-		B35C98CA162B3453003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AE162B3453003A1D03 /* TO.m */; };
 		B35C98CB162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; };
 		B35C98CC162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; };
-		B35C98CD162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; };
 		B35C98CE162B3453003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B0162B3453003A1D03 /* TOCocoa.m */; };
 		B35C98CF162B3453003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B0162B3453003A1D03 /* TOCocoa.m */; };
-		B35C98D0162B3453003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B0162B3453003A1D03 /* TOCocoa.m */; };
 		B35C98D1162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; };
 		B35C98D2162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; };
-		B35C98D3162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; };
 		B35C98D4162B3453003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B2162B3453003A1D03 /* TOMath.m */; };
 		B35C98D5162B3453003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B2162B3453003A1D03 /* TOMath.m */; };
-		B35C98D6162B3453003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B2162B3453003A1D03 /* TOMath.m */; };
 		B37699F2162962EA0050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
 		B3769A03162962FA0050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
-		B3769A17162963060050BAD0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
 		B3769A3D162969620050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
 		B3769A6516296A810050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699EE162962EA0050BAD0 /* libTosti.a */; };
 		B3769A6C16296BDF0050BAD0 /* NWLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A6B16296BDF0050BAD0 /* NWLogging.framework */; };
@@ -71,7 +58,6 @@
 		B3769AC416298EC90050BAD0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AB316298E890050BAD0 /* Default.png */; };
 		B3769AC516298EC90050BAD0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AB416298E890050BAD0 /* Default@2x.png */; };
 		B3769AC616298EC90050BAD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AB516298E890050BAD0 /* main.m */; };
-		B3769AC716298EC90050BAD0 /* TOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AB716298E890050BAD0 /* TOAppDelegate.m */; };
 		B3769AC816298EC90050BAD0 /* TOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769ABB16298E890050BAD0 /* TOViewController.m */; };
 		B3769ACF1629918E0050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699EE162962EA0050BAD0 /* libTosti.a */; };
 		B3769AD2162991960050BAD0 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A01162962FA0050BAD0 /* libTosti.a */; };
@@ -81,12 +67,14 @@
 		B3769ADB162995320050BAD0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3769AD7162995320050BAD0 /* Icon@2x.png */; };
 		B3769AF41629981C0050BAD0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769AF31629981C0050BAD0 /* libz.dylib */; };
 		B3769AF6162998210050BAD0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769AF5162998210050BAD0 /* MessageUI.framework */; };
+		B39C0AC41630BE5F001BBAE6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
+		B39C0ADA1630BEBF001BBAE6 /* NWLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A6B16296BDF0050BAD0 /* NWLogging.framework */; };
+		B39C0AEA1630C131001BBAE6 /* TOConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D7FF162FE823001EF37C /* TOConsoleController.m */; };
+		B39C0AED1630C140001BBAE6 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A01162962FA0050BAD0 /* libTosti.a */; };
 		B3AFDADC162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; };
 		B3AFDADD162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; };
-		B3AFDADE162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; };
 		B3AFDADF162F2D2E0050D1F8 /* TOValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDADB162F2D2E0050D1F8 /* TOValue.m */; };
 		B3AFDAE0162F2D2E0050D1F8 /* TOValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDADB162F2D2E0050D1F8 /* TOValue.m */; };
-		B3AFDAE1162F2D2E0050D1F8 /* TOValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDADB162F2D2E0050D1F8 /* TOValue.m */; };
 		B3AFDAE5162F35380050D1F8 /* TOTestCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAE4162F35380050D1F8 /* TOTestCocoa.m */; };
 		B3AFDAE6162F35380050D1F8 /* TOTestCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAE4162F35380050D1F8 /* TOTestCocoa.m */; };
 		B3AFDAE8162F364C0050D1F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */; };
@@ -99,6 +87,10 @@
 		B3AFDAF2162F37670050D1F8 /* TOTestCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF0162F37670050D1F8 /* TOTestCore.m */; };
 		B3AFDAF5162F37990050D1F8 /* TOTestIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */; };
 		B3AFDAF6162F37990050D1F8 /* TOTestIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */; };
+		B3DAB2581630C33800DEA919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3769AB516298E890050BAD0 /* main.m */; };
+		B3DAB25B1630C40F00DEA919 /* TOTouchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB25A1630C40F00DEA919 /* TOTouchAppDelegate.m */; };
+		B3DAB2611630C49500DEA919 /* TOCocoaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DAB2601630C49400DEA919 /* TOCocoaAppDelegate.m */; };
+		B3DAB2621630C4E900DEA919 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DAB25C1630C43100DEA919 /* MainMenu.xib */; };
 		B3E9D800162FE823001EF37C /* TOConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D7FF162FE823001EF37C /* TOConsoleController.m */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +110,13 @@
 			remoteInfo = TostiTouchStatic;
 		};
 		B3769AD0162991930050BAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B37699E3162961570050BAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3769A00162962FA0050BAD0;
+			remoteInfo = TostiCocoaStatic;
+		};
+		B39C0AEB1630C13D001BBAE6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B37699E3162961570050BAD0 /* Project object */;
 			proxyType = 1;
@@ -144,10 +143,6 @@
 		B37699F1162962EA0050BAD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B3769A01162962FA0050BAD0 /* libTosti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTosti.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3769A02162962FA0050BAD0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		B3769A05162962FA0050BAD0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		B3769A06162962FA0050BAD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		B3769A07162962FA0050BAD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B3769A16162963060050BAD0 /* TostiCocoaFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TostiCocoaFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3769A261629635C0050BAD0 /* TostiCocoaFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiCocoaFramework-Info.plist"; sourceTree = "<group>"; };
 		B3769A39162969620050BAD0 /* TostiTouchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TostiTouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3769A6B16296BDF0050BAD0 /* NWLogging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NWLogging.framework; path = Frameworks/NWLogging.framework; sourceTree = "<group>"; };
@@ -158,10 +153,8 @@
 		B3769AB316298E890050BAD0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B3769AB416298E890050BAD0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B3769AB516298E890050BAD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B3769AB616298E890050BAD0 /* TOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOAppDelegate.h; sourceTree = "<group>"; };
-		B3769AB716298E890050BAD0 /* TOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOAppDelegate.m; sourceTree = "<group>"; };
 		B3769AB816298E890050BAD0 /* TostiTouchDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiTouchDemo-Info.plist"; sourceTree = "<group>"; };
-		B3769AB916298E890050BAD0 /* TostiTouchDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TostiTouchDemo-Prefix.pch"; sourceTree = "<group>"; };
+		B3769AB916298E890050BAD0 /* TostiDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TostiDemo-Prefix.pch"; sourceTree = "<group>"; };
 		B3769ABA16298E890050BAD0 /* TOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOViewController.h; sourceTree = "<group>"; };
 		B3769ABB16298E890050BAD0 /* TOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOViewController.m; sourceTree = "<group>"; };
 		B3769ABD16298E890050BAD0 /* TostiCocoaTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiCocoaTest-Info.plist"; sourceTree = "<group>"; };
@@ -172,6 +165,7 @@
 		B3769AD7162995320050BAD0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B3769AF31629981C0050BAD0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		B3769AF5162998210050BAD0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		B39C0AC21630BE5F001BBAE6 /* TostiCocoaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TostiCocoaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AFDADA162F2D2E0050D1F8 /* TOValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOValue.h; sourceTree = "<group>"; };
 		B3AFDADB162F2D2E0050D1F8 /* TOValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOValue.m; sourceTree = "<group>"; };
 		B3AFDAE4162F35380050D1F8 /* TOTestCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTestCocoa.m; sourceTree = "<group>"; };
@@ -179,6 +173,12 @@
 		B3AFDAEB162F36600050D1F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B3AFDAF0162F37670050D1F8 /* TOTestCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTestCore.m; sourceTree = "<group>"; };
 		B3AFDAF4162F37990050D1F8 /* TOTestIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTestIntegration.m; sourceTree = "<group>"; };
+		B3DAB2591630C40F00DEA919 /* TOTouchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOTouchAppDelegate.h; sourceTree = "<group>"; };
+		B3DAB25A1630C40F00DEA919 /* TOTouchAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTouchAppDelegate.m; sourceTree = "<group>"; };
+		B3DAB25C1630C43100DEA919 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		B3DAB25D1630C43100DEA919 /* TostiCocoaDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TostiCocoaDemo-Info.plist"; sourceTree = "<group>"; };
+		B3DAB25F1630C49400DEA919 /* TOCocoaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCocoaAppDelegate.h; sourceTree = "<group>"; };
+		B3DAB2601630C49400DEA919 /* TOCocoaAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCocoaAppDelegate.m; sourceTree = "<group>"; };
 		B3E9D7FE162FE823001EF37C /* TOConsoleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOConsoleController.h; sourceTree = "<group>"; };
 		B3E9D7FF162FE823001EF37C /* TOConsoleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOConsoleController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,14 +197,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3769A03162962FA0050BAD0 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B3769A12162963060050BAD0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3769A17162963060050BAD0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +235,16 @@
 				B3769AA316298E310050BAD0 /* Cocoa.framework in Frameworks */,
 				B3AFDAE9162F36520050D1F8 /* CoreGraphics.framework in Frameworks */,
 				B3AFDAED162F36680050D1F8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39C0ABF1630BE5F001BBAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39C0AED1630C140001BBAE6 /* libTosti.a in Frameworks */,
+				B39C0AC41630BE5F001BBAE6 /* Cocoa.framework in Frameworks */,
+				B39C0ADA1630BEBF001BBAE6 /* NWLogging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,10 +296,10 @@
 			children = (
 				B37699EE162962EA0050BAD0 /* libTosti.a */,
 				B3769A01162962FA0050BAD0 /* libTosti.a */,
-				B3769A16162963060050BAD0 /* TostiCocoaFramework.framework */,
 				B3769A39162969620050BAD0 /* TostiTouchDemo.app */,
 				B3769A8A16298E200050BAD0 /* TostiTouchTest.octest */,
 				B3769AA116298E310050BAD0 /* TostiCocoaTest.octest */,
+				B39C0AC21630BE5F001BBAE6 /* TostiCocoaDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,27 +307,16 @@
 		B37699F0162962EA0050BAD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B3769AF5162998210050BAD0 /* MessageUI.framework */,
-				B3769AF31629981C0050BAD0 /* libz.dylib */,
 				B3769A6B16296BDF0050BAD0 /* NWLogging.framework */,
+				B3769AF31629981C0050BAD0 /* libz.dylib */,
+				B3769AF5162998210050BAD0 /* MessageUI.framework */,
 				B37699F1162962EA0050BAD0 /* Foundation.framework */,
 				B3769A02162962FA0050BAD0 /* Cocoa.framework */,
 				B3769A8B16298E200050BAD0 /* SenTestingKit.framework */,
 				B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */,
 				B3AFDAEB162F36600050D1F8 /* UIKit.framework */,
-				B3769A04162962FA0050BAD0 /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B3769A04162962FA0050BAD0 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B3769A05162962FA0050BAD0 /* AppKit.framework */,
-				B3769A06162962FA0050BAD0 /* CoreData.framework */,
-				B3769A07162962FA0050BAD0 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		B3769A251629635C0050BAD0 /* Library */ = {
@@ -380,11 +371,15 @@
 				B3769AB216298E890050BAD0 /* Default-568h@2x.png */,
 				B3769AB316298E890050BAD0 /* Default.png */,
 				B3769AB416298E890050BAD0 /* Default@2x.png */,
-				B3769AB516298E890050BAD0 /* main.m */,
-				B3769AB616298E890050BAD0 /* TOAppDelegate.h */,
-				B3769AB716298E890050BAD0 /* TOAppDelegate.m */,
+				B3DAB2591630C40F00DEA919 /* TOTouchAppDelegate.h */,
+				B3DAB25A1630C40F00DEA919 /* TOTouchAppDelegate.m */,
 				B3769AB816298E890050BAD0 /* TostiTouchDemo-Info.plist */,
-				B3769AB916298E890050BAD0 /* TostiTouchDemo-Prefix.pch */,
+				B3DAB25F1630C49400DEA919 /* TOCocoaAppDelegate.h */,
+				B3DAB2601630C49400DEA919 /* TOCocoaAppDelegate.m */,
+				B3DAB25D1630C43100DEA919 /* TostiCocoaDemo-Info.plist */,
+				B3DAB25C1630C43100DEA919 /* MainMenu.xib */,
+				B3769AB916298E890050BAD0 /* TostiDemo-Prefix.pch */,
+				B3769AB516298E890050BAD0 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -411,20 +406,6 @@
 				B35C98CC162B3453003A1D03 /* TOCocoa.h in Headers */,
 				B35C98D2162B3453003A1D03 /* TOMath.h in Headers */,
 				B3AFDADD162F2D2E0050D1F8 /* TOValue.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B3769A13162963060050BAD0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B35C98B5162B3453003A1D03 /* TOEval.h in Headers */,
-				B35C98BB162B3453003A1D03 /* TOMem.h in Headers */,
-				B35C98C1162B3453003A1D03 /* TORead.h in Headers */,
-				B35C98C7162B3453003A1D03 /* TO.h in Headers */,
-				B35C98CD162B3453003A1D03 /* TOCocoa.h in Headers */,
-				B35C98D3162B3453003A1D03 /* TOMath.h in Headers */,
-				B3AFDADE162F2D2E0050D1F8 /* TOValue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,24 +459,6 @@
 			productName = TostiCocoaStatic;
 			productReference = B3769A01162962FA0050BAD0 /* libTosti.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		B3769A15162963060050BAD0 /* TostiCocoaFramework */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B3769A22162963060050BAD0 /* Build configuration list for PBXNativeTarget "TostiCocoaFramework" */;
-			buildPhases = (
-				B3769A11162963060050BAD0 /* Sources */,
-				B3769A12162963060050BAD0 /* Frameworks */,
-				B3769A13162963060050BAD0 /* Headers */,
-				B3769A14162963060050BAD0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TostiCocoaFramework;
-			productName = TostiCocoaFramework;
-			productReference = B3769A16162963060050BAD0 /* TostiCocoaFramework.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		B3769A38162969620050BAD0 /* TostiTouchDemo */ = {
 			isa = PBXNativeTarget;
@@ -553,6 +516,24 @@
 			productReference = B3769AA116298E310050BAD0 /* TostiCocoaTest.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		B39C0AC11630BE5F001BBAE6 /* TostiCocoaDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B39C0AD71630BE5F001BBAE6 /* Build configuration list for PBXNativeTarget "TostiCocoaDemo" */;
+			buildPhases = (
+				B39C0ABE1630BE5F001BBAE6 /* Sources */,
+				B39C0ABF1630BE5F001BBAE6 /* Frameworks */,
+				B39C0AC01630BE5F001BBAE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B39C0AEC1630C13D001BBAE6 /* PBXTargetDependency */,
+			);
+			name = TostiCocoaDemo;
+			productName = TostiCocoaDemo;
+			productReference = B39C0AC21630BE5F001BBAE6 /* TostiCocoaDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -577,23 +558,16 @@
 			targets = (
 				B37699ED162962EA0050BAD0 /* TostiTouchStatic */,
 				B3769A00162962FA0050BAD0 /* TostiCocoaStatic */,
-				B3769A15162963060050BAD0 /* TostiCocoaFramework */,
 				B3769A8916298E200050BAD0 /* TostiTouchTest */,
 				B3769AA016298E310050BAD0 /* TostiCocoaTest */,
 				B3769A38162969620050BAD0 /* TostiTouchDemo */,
+				B39C0AC11630BE5F001BBAE6 /* TostiCocoaDemo */,
 				B363EABF1629FC14003E80C3 /* TostiUniversal */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B3769A14162963060050BAD0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3769A37162969620050BAD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -619,6 +593,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39C0AC01630BE5F001BBAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3DAB2621630C4E900DEA919 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,28 +678,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3769A11162963060050BAD0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B35C98B8162B3453003A1D03 /* TOEval.m in Sources */,
-				B35C98BE162B3453003A1D03 /* TOMem.m in Sources */,
-				B35C98C4162B3453003A1D03 /* TORead.m in Sources */,
-				B35C98CA162B3453003A1D03 /* TO.m in Sources */,
-				B35C98D0162B3453003A1D03 /* TOCocoa.m in Sources */,
-				B35C98D6162B3453003A1D03 /* TOMath.m in Sources */,
-				B3AFDAE1162F2D2E0050D1F8 /* TOValue.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3769A35162969620050BAD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B3769AC616298EC90050BAD0 /* main.m in Sources */,
-				B3769AC716298EC90050BAD0 /* TOAppDelegate.m in Sources */,
 				B3769AC816298EC90050BAD0 /* TOViewController.m in Sources */,
 				B3E9D800162FE823001EF37C /* TOConsoleController.m in Sources */,
+				B3DAB25B1630C40F00DEA919 /* TOTouchAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +709,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B39C0ABE1630BE5F001BBAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39C0AEA1630C131001BBAE6 /* TOConsoleController.m in Sources */,
+				B3DAB2581630C33800DEA919 /* main.m in Sources */,
+				B3DAB2611630C49500DEA919 /* TOCocoaAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -758,6 +736,11 @@
 			isa = PBXTargetDependency;
 			target = B3769A00162962FA0050BAD0 /* TostiCocoaStatic */;
 			targetProxy = B3769AD0162991930050BAD0 /* PBXContainerItemProxy */;
+		};
+		B39C0AEC1630C13D001BBAE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3769A00162962FA0050BAD0 /* TostiCocoaStatic */;
+			targetProxy = B39C0AEB1630C13D001BBAE6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -872,7 +855,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Tosti;
 				SDKROOT = macosx;
@@ -898,78 +881,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = Tosti;
 				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		B3769A23162963060050BAD0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Library/TostiCocoaFramework-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		B3769A24162963060050BAD0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Library/TostiCocoaFramework-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
@@ -993,7 +907,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Demo/TostiTouchDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "Demo/TostiDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1030,7 +944,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Demo/TostiTouchDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "Demo/TostiDemo-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1179,6 +1093,79 @@
 			};
 			name = Release;
 		};
+		B39C0AD81630BE5F001BBAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/TostiDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/TostiCocoaDemo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B39C0AD91630BE5F001BBAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/TostiDemo-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/TostiCocoaDemo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1218,15 +1205,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3769A22162963060050BAD0 /* Build configuration list for PBXNativeTarget "TostiCocoaFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3769A23162963060050BAD0 /* Debug */,
-				B3769A24162963060050BAD0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B3769A52162969620050BAD0 /* Build configuration list for PBXNativeTarget "TostiTouchDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1250,6 +1228,15 @@
 			buildConfigurations = (
 				B3769AAF16298E310050BAD0 /* Debug */,
 				B3769AB016298E310050BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B39C0AD71630BE5F001BBAE6 /* Build configuration list for PBXNativeTarget "TostiCocoaDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B39C0AD81630BE5F001BBAE6 /* Debug */,
+				B39C0AD91630BE5F001BBAE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
