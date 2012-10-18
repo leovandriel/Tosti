@@ -7,7 +7,11 @@
 
 #import "TOValue.h"
 #import <CoreGraphics/CoreGraphics.h>
+
+#include "TargetConditionals.h"
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#endif
 
 
 #define TOStructReturn(__struct, __prop) if (!strncmp(self.objCType, ("{"#__struct), strlen("{"#__struct))) return TOValueGet(self, __struct).__prop
@@ -115,25 +119,33 @@
 
 - (CGFloat)top
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(UIEdgeInsets, top);
+#endif
     return 0.f;
 }
 
 - (CGFloat)left
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(UIEdgeInsets, left);
+#endif
     return 0.f;
 }
 
 - (CGFloat)bottom
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(UIEdgeInsets, bottom);
+#endif
     return 0.f;
 }
 
 - (CGFloat)right
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(UIEdgeInsets, right);
+#endif
     return 0.f;
 }
 

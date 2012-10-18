@@ -10,8 +10,11 @@
 #import "TOValue.h"
 #import <objc/runtime.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import <UIKit/UIKit.h>
 
+#include "TargetConditionals.h"
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#endif
 
 @implementation TOCocoa
 
@@ -141,10 +144,12 @@
 + (id(^)(id,id,id,id))UIEdgeInsetsMake
 {
     return ^id(id x, id y, id w, id h) {
+#if TARGET_OS_IPHONE
         if ([x isKindOfClass:NSNumber.class] && [y isKindOfClass:NSNumber.class] && [w isKindOfClass:NSNumber.class] && [h isKindOfClass:NSNumber.class]) {
             UIEdgeInsets insets = UIEdgeInsetsMake([x floatValue], [y floatValue], [w floatValue], [h floatValue]);
             return [[TOValue alloc] initWithBytes:&insets objCType:@encode(UIEdgeInsets)];
         }
+#endif
         return nil;
     };
 }
