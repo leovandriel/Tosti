@@ -21,28 +21,28 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B35C98B3162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; };
-		B35C98B4162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; };
+		B35C98B3162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B35C98B4162B3453003A1D03 /* TOEval.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A6162B3453003A1D03 /* TOEval.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35C98B6162B3453003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A7162B3453003A1D03 /* TOEval.m */; };
 		B35C98B7162B3453003A1D03 /* TOEval.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A7162B3453003A1D03 /* TOEval.m */; };
-		B35C98B9162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; };
-		B35C98BA162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; };
+		B35C98B9162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B35C98BA162B3453003A1D03 /* TOMem.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98A8162B3453003A1D03 /* TOMem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35C98BC162B3453003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A9162B3453003A1D03 /* TOMem.m */; };
 		B35C98BD162B3453003A1D03 /* TOMem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98A9162B3453003A1D03 /* TOMem.m */; };
-		B35C98BF162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; };
-		B35C98C0162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; };
+		B35C98BF162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B35C98C0162B3453003A1D03 /* TORead.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AA162B3453003A1D03 /* TORead.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35C98C2162B3453003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AB162B3453003A1D03 /* TORead.m */; };
 		B35C98C3162B3453003A1D03 /* TORead.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AB162B3453003A1D03 /* TORead.m */; };
-		B35C98C5162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; };
-		B35C98C6162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; };
+		B35C98C5162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B35C98C6162B3453003A1D03 /* TO.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AD162B3453003A1D03 /* TO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35C98C8162B3453003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AE162B3453003A1D03 /* TO.m */; };
 		B35C98C9162B3453003A1D03 /* TO.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98AE162B3453003A1D03 /* TO.m */; };
-		B35C98CB162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; };
-		B35C98CC162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; };
+		B35C98CB162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B35C98CC162B3453003A1D03 /* TOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98AF162B3453003A1D03 /* TOCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35C98CE162B3453003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B0162B3453003A1D03 /* TOCocoa.m */; };
 		B35C98CF162B3453003A1D03 /* TOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B0162B3453003A1D03 /* TOCocoa.m */; };
-		B35C98D1162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; };
-		B35C98D2162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; };
+		B35C98D1162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B35C98D2162B3453003A1D03 /* TOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = B35C98B1162B3453003A1D03 /* TOMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35C98D4162B3453003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B2162B3453003A1D03 /* TOMath.m */; };
 		B35C98D5162B3453003A1D03 /* TOMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C98B2162B3453003A1D03 /* TOMath.m */; };
 		B37699F2162962EA0050BAD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37699F1162962EA0050BAD0 /* Foundation.framework */; };
@@ -61,8 +61,8 @@
 		B39C0AC41630BE5F001BBAE6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A02162962FA0050BAD0 /* Cocoa.framework */; };
 		B39C0ADA1630BEBF001BBAE6 /* NWLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A6B16296BDF0050BAD0 /* NWLogging.framework */; };
 		B39C0AED1630C140001BBAE6 /* libTosti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3769A01162962FA0050BAD0 /* libTosti.a */; };
-		B3AFDADC162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; };
-		B3AFDADD162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; };
+		B3AFDADC162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3AFDADD162F2D2E0050D1F8 /* TOValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AFDADA162F2D2E0050D1F8 /* TOValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3AFDADF162F2D2E0050D1F8 /* TOValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDADB162F2D2E0050D1F8 /* TOValue.m */; };
 		B3AFDAE0162F2D2E0050D1F8 /* TOValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDADB162F2D2E0050D1F8 /* TOValue.m */; };
 		B3AFDAE5162F35380050D1F8 /* TOTestCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAE4162F35380050D1F8 /* TOTestCocoa.m */; };
@@ -71,7 +71,6 @@
 		B3AFDAE9162F36520050D1F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */; };
 		B3AFDAEA162F36530050D1F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAE7162F364C0050D1F8 /* CoreGraphics.framework */; };
 		B3AFDAEC162F36600050D1F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAEB162F36600050D1F8 /* UIKit.framework */; };
-		B3AFDAED162F36680050D1F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAEB162F36600050D1F8 /* UIKit.framework */; };
 		B3AFDAEE162F36680050D1F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AFDAEB162F36600050D1F8 /* UIKit.framework */; };
 		B3AFDAF1162F37670050D1F8 /* TOTestCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF0162F37670050D1F8 /* TOTestCore.m */; };
 		B3AFDAF2162F37670050D1F8 /* TOTestCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AFDAF0162F37670050D1F8 /* TOTestCore.m */; };
@@ -234,7 +233,6 @@
 				B3769AA216298E310050BAD0 /* SenTestingKit.framework in Frameworks */,
 				B3769AA316298E310050BAD0 /* Cocoa.framework in Frameworks */,
 				B3AFDAE9162F36520050D1F8 /* CoreGraphics.framework in Frameworks */,
-				B3AFDAED162F36680050D1F8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1059,10 +1057,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1099,10 +1094,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
