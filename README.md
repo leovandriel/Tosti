@@ -56,15 +56,18 @@ Or how things can go wrong at runtime:
     ["" substringToIndex:3]
     Exception '*** -[__NSCFString substringToIndex:]: Range or index ...
 
-In this demo app, the view controller has been assigned to `self`:
+In this demo app, the view controller has been assigned to `self`. On iOS this allows for:
 
-    self.class
-    console=self.delegate.view.subviews[0]
-    console.textColor=UIColor.greenColor
+    console = self.delegate.view.subviews[0]
+    console.textColor = UIColor.greenColor
     frame = console.frame
     dispatch_async(^{console.frame = CGRectMake(10, 10, 100, 100)})
     dispatch_async(^{console.frame = frame})
 
+With some minor modifications, this code also runs on Mac:
+
+    console = self.delegate.console
+    dispatch_async(^{console.textColor = NSColor.greenColor})
 
 Including Tosti in your project is fairly straightforward. You can run the `TostiUniversal` target which builds a `Tosti.framework` in the project root. Alternatively, you can add the library sources to your project. Make sure you read the disclaimer below if you plan to submit your app to Apple's App Store.
 

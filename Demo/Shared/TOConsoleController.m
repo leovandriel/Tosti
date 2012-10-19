@@ -21,7 +21,8 @@
 
 - (void)setup
 {
-    _history = [NSUserDefaults.standardUserDefaults objectForKey:@"history"];
+    NSArray *history = [[NSUserDefaults.standardUserDefaults stringForKey:@"history"] componentsSeparatedByString:@"\n"];
+    _history = [[NSMutableArray alloc] initWithArray:history];
     if (!_history.count) {
         _history = [NSMutableArray arrayWithObject:@""];
     }
@@ -55,7 +56,7 @@
     });
     _delegate.input = @"";
     [_history addObject:_delegate.input];
-    [NSUserDefaults.standardUserDefaults setObject:_history forKey:@"history"];
+    [NSUserDefaults.standardUserDefaults setObject:[_history componentsJoinedByString:@"\n"] forKey:@"history"];
     [NSUserDefaults.standardUserDefaults synchronize];
 }
 

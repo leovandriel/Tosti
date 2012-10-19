@@ -19,6 +19,7 @@
     _console.string = @"Enter 'help' for help.\n";
     
     _editor.editable = YES;
+    [_window makeFirstResponder:_editor];
     
     TOConsoleController *controller = [[TOConsoleController alloc] init];
     [controller setup];
@@ -34,18 +35,23 @@
 - (NSString *)input
 {
     NWAssertMainThread();
-    return _editor.string;
+    return [_editor.string copy];
 }
 
 - (void)setInput:(NSString *)input
 {
     NWAssertMainThread();
-    _editor.string = input;
+    _editor.string = [input copy];
 }
 
 - (void)append:(NSString *)text
 {
     [_console safeAppendAndFollowText:text];
+}
+
+- (id)console
+{
+    return _console;
 }
 
 @end
