@@ -182,6 +182,16 @@
     STAssertEqualObjects(_logs, @"", @"");
 }
 
+- (void)testPointer
+{
+    [self eval:@"NSString *a = @'hello'"];
+    STAssertEqualObjects([_mem get:@"a"], @"hello", @"");
+    [self eval:@"NSString* b = @'hello'"];
+    STAssertEqualObjects([_mem get:@"b"], @"hello", @"");
+    [self eval:@"NSString * c = @'hello'"];
+    STAssertEqualObjects([_mem get:@"c"], @"hello", @"");
+}
+
 
 #pragma mark - Classes
 

@@ -295,7 +295,7 @@ static NSString *TOTypeReturn       = @"e";
 {
     for (const char *s = _chars + _index;; s++) {
         switch (*s) {
-            case ' ': case '\t': case '\n': case '\r': break;
+            case ' ': case '\t': case '\n': case '\r': case '*': break;
             default: _index = s - _chars; return;
         }
     }
