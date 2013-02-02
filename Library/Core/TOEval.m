@@ -189,6 +189,17 @@ static NSUInteger const TOStackSize = 100;
         SEL sel = NSSelectorFromString(selector);
         if ([target respondsToSelector:sel]) {
             NSMethodSignature *signature = [target methodSignatureForSelector:sel];
+            if (signature.numberOfArguments < arguments.count + 2) {
+                NSMutableString *s = @"".mutableCopy;
+                for (NSUInteger i = 0; i < signature.numberOfArguments; i++) {
+                    [s appendFormat:@"%c", *[signature getArgumentTypeAtIndex:i]];
+                }
+                for (NSUInteger i = 0; i < arguments.count + 2 - signature.numberOfArguments; i++) {
+                    [s appendString:@"@"];
+                }
+                [s insertString:@"@" atIndex:0]; //bug?
+                signature = [NSMethodSignature signatureWithObjCTypes:[s cStringUsingEncoding:NSUTF8StringEncoding]];
+            }
             NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
             [invocation setSelector:sel];
             for (NSUInteger i = 2; i < signature.numberOfArguments; i++) {

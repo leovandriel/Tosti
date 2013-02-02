@@ -238,6 +238,10 @@
     STAssertEqualObjects([_mem get:@"x"], @"A", @"");
     [self eval:@"x=[@['b' 'a'] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)]"];
     id x = @[@"a",@"b"]; STAssertEqualObjects([_mem get:@"x"], x, @"");
+    [self eval:@"x=[NSString stringWithFormat:'a']"];
+    STAssertEqualObjects([_mem get:@"x"], @"a", @"");
+    [self eval:@"x=[NSString stringWithFormat:'a%@c%@e','b','d']"];
+    STAssertEqualObjects([_mem get:@"x"], @"abcde", @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 

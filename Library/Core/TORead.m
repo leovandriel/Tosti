@@ -142,7 +142,7 @@ static NSString *TOTypeReturn       = @"e";
     NSArray *target = [self statement]; [self space];
     NSMutableString *selector = [[NSMutableString alloc] init];
     NSMutableArray *arguments = [[NSMutableArray alloc] initWithCapacity:2];
-    for (char c = [self chars:":]"];; c = [self chars:":]"]) {
+    for (char c = [self chars:":],"];; c = [self chars:":],"]) {
         [self space];
         if (c == '\0' && _chars[_index]) {
             NSString *n = [self nameWith:'\0'];
@@ -154,6 +154,10 @@ static NSString *TOTypeReturn       = @"e";
             }
         } else if (c == ':') {
             [selector appendString:@":"];
+            NSArray *s = [self statement];
+            if (s) [arguments addObject:s];
+            else [self logExpect:@"expecting argument"];
+        } else if (c == ',') {
             NSArray *s = [self statement];
             if (s) [arguments addObject:s];
             else [self logExpect:@"expecting argument"];
