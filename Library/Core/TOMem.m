@@ -22,7 +22,7 @@ id const TONil = @"TONil";
 {
     self = [super init];
     if (self) {
-        _memory = [[NSMutableDictionary alloc] init];
+        _memory = @{}.mutableCopy;
         [self set:self name:@"_mem"];
     }
     return self;
@@ -42,7 +42,7 @@ id const TONil = @"TONil";
 
 - (id)getInternal:(NSString *)name
 {
-    id result = [_memory objectForKey:name];
+    id result = _memory[name];
     if (!result) result = [_parent getInternal:name];
     return result;
 }
@@ -57,8 +57,8 @@ id const TONil = @"TONil";
 
 - (void)setInternal:(id)value name:(NSString *)name
 {
-    BOOL set = !_parent || !![_memory objectForKey:name];
-    if (set) [_memory setObject:value forKey:name];
+    BOOL set = !_parent || !!_memory[name];
+    if (set) _memory[name] = value;
     else [_parent setInternal:value name:name];
 }
 
@@ -69,7 +69,7 @@ id const TONil = @"TONil";
 
 - (void)unsetInternal:(NSString *)name
 {
-    BOOL set = !_parent || !![_memory objectForKey:name];
+    BOOL set = !_parent || !!_memory[name];
     if (set) [_memory removeObjectForKey:name];
     else [_parent unsetInternal:name];
 }
@@ -81,14 +81,14 @@ id const TONil = @"TONil";
 
 - (NSArray *)dump
 {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
+    NSMutableArray *result = @[].mutableCopy;
     [self dumpInto:result];
     return result;
 }
 
 - (void)dumpInto:(NSMutableArray *)array
 {
-    NSMutableArray *dump = [[NSMutableArray alloc] init];
+    NSMutableArray *dump = @[].mutableCopy;
     for (NSString *name in [_memory.allKeys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)]) {
         id i = [self get:name];
         if (i) {

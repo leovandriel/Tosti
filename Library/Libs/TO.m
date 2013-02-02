@@ -44,7 +44,7 @@
 
 + (NSArray *)selectorsForObject:(id)object
 {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
+    NSMutableArray *result = @[].mutableCopy;
     unsigned int count = 0;
     Method *methods = class_copyMethodList(object_getClass(object), &count);
     for (NSUInteger i = 0; i < count; i++) {
@@ -72,14 +72,14 @@
 {
     return ^id(id mem, id targets, id target2, id target3) {
         if (![targets isKindOfClass:NSArray.class]) {
-            NSMutableArray *t = [[NSMutableArray alloc] init];
+            NSMutableArray *t = @[].mutableCopy;
             if (targets) [t addObject:targets];
             if (target2) [t addObject:target2];
             if (target3) [t addObject:target3];
             targets = t;
         }
         if ([mem isKindOfClass:TOMem.class]) {
-            NSMutableArray *result = [[NSMutableArray alloc] init];
+            NSMutableArray *result = @[].mutableCopy;
             for (id target in targets) {
                 for (NSString *selector in [TO selectorsForObject:target]) {
                     SEL sel = NSSelectorFromString(selector);

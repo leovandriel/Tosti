@@ -198,9 +198,9 @@
 - (void)testClass
 {
     [self eval:@"x=[[NSArray alloc]init]"];
-    STAssertEqualObjects([_mem get:@"x"], [NSArray array], @"");
+    STAssertEqualObjects([_mem get:@"x"], @[], @"");
     [self eval:@"x=[NSArray array]"];
-    STAssertEqualObjects([_mem get:@"x"], [NSArray array], @"");
+    STAssertEqualObjects([_mem get:@"x"], @[], @"");
     [self eval:@"x=[[NSArray arrayWithObject:x]count]"];
     STAssertEqualObjects([_mem get:@"x"], @1, @"");
     STAssertEqualObjects(_logs, @"", @"");

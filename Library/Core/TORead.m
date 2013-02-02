@@ -140,7 +140,7 @@ static NSString *TOTypeReturn       = @"e";
     NSUInteger start = _index;
     [self char:'[']; [self space];
     NSArray *target = [self statement]; [self space];
-    NSMutableString *selector = [[NSMutableString alloc] init];
+    NSMutableString *selector = @"".mutableCopy;
     NSMutableArray *arguments = [[NSMutableArray alloc] initWithCapacity:2];
     for (char c = [self chars:":],"];; c = [self chars:":],"]) {
         [self space];
@@ -164,7 +164,7 @@ static NSString *TOTypeReturn       = @"e";
         } else break;
         [self space];
     }
-    NSMutableArray *result = [[NSMutableArray alloc] initWithArray:@[TOTypeMethod, @(start)]];
+    NSMutableArray *result = @[TOTypeMethod, @(start)].mutableCopy;
     if (target.count) {
         [result addObject:target];
         if (selector.length) {
@@ -200,7 +200,7 @@ static NSString *TOTypeReturn       = @"e";
     switch (chr) {
         case '"': case '\'': {
             const char *s = _chars + _index;
-            NSMutableString *result = [[NSMutableString alloc] init];
+            NSMutableString *result = @"".mutableCopy;
             for (char c = *s, escaping = NO; c; c = *++s) {
                 if (c == '\\' && !escaping) escaping = YES;
                 else if (c == chr && !escaping) break;

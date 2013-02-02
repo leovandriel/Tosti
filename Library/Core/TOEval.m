@@ -125,10 +125,10 @@ static NSUInteger const TOStackSize = 100;
                     id sub = [self evalStatement:statement[3]];
                     if ([target isKindOfClass:NSArray.class]) {
                         NSUInteger i = [sub unsignedIntegerValue];
-                        if (i < [target count]) result = [target objectAtIndex:i];
+                        if (i < [target count]) result = target[i];
                         else [self logAt:index line:@"Index out-of-bounds '%@'", sub];
                     }
-                    else if ([target isKindOfClass:NSDictionary.class]) result = [target objectForKey:sub];
+                    else if ([target isKindOfClass:NSDictionary.class]) result = target[sub];
                 } else result = target;
             } break;
             case 's': { // scope
@@ -164,7 +164,7 @@ static NSUInteger const TOStackSize = 100;
                         for (NSArray *pair in value) {
                             id key = [self evalStatement:pair[0]];
                             id value = pair.count > 1 ? [self evalStatement:pair[1]] : nil;
-                            [result setObject:value ? value : NSNull.null forKey:key ? key : NSNull.null];
+                            result[key ? key : NSNull.null] = value ? value : NSNull.null;
                         }
                     } break;
                     case 's': result = [self evalStatement:value]; break;

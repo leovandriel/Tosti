@@ -22,9 +22,9 @@
 - (void)setup
 {
     NSArray *history = [[NSUserDefaults.standardUserDefaults stringForKey:@"history"] componentsSeparatedByString:@"\n"];
-    _history = [[NSMutableArray alloc] initWithArray:history];
+    _history = history.mutableCopy;
     if (!_history.count) {
-        _history = [NSMutableArray arrayWithObject:@""];
+        _history = @[@""].mutableCopy;
     }
     
     TOMem *mem = [TOMem eval:@"[[TOMem alloc] init]"];
