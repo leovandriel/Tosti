@@ -94,12 +94,48 @@
     };
 }
 
+
+#pragma mark - Foundation Make
+
 + (id(^)(id,id))NSMakeRange
 {
     return ^id(id w, id h) {
         if ([w isKindOfClass:NSNumber.class] && [h isKindOfClass:NSNumber.class]) {
             NSRange range = NSMakeRange([w integerValue], [h integerValue]);
             return [[TOValue alloc] initWithBytes:&range objCType:@encode(NSRange)];
+        }
+        return nil;
+    };
+}
+
++ (id(^)(id,id))NSMakePoint
+{
+    return ^id(id w, id h) {
+        if ([w isKindOfClass:NSNumber.class] && [h isKindOfClass:NSNumber.class]) {
+            NSPoint point = NSMakePoint([w floatValue], [h floatValue]);
+            return [[TOValue alloc] initWithBytes:&point objCType:@encode(NSPoint)];
+        }
+        return nil;
+    };
+}
+
++ (id(^)(id,id,id,id))NSMakeRect
+{
+    return ^id(id x, id y, id w, id h) {
+        if ([x isKindOfClass:NSNumber.class] && [y isKindOfClass:NSNumber.class] && [w isKindOfClass:NSNumber.class] && [h isKindOfClass:NSNumber.class]) {
+            NSRect rect = NSMakeRect([x floatValue], [y floatValue], [w floatValue], [h floatValue]);
+            return [[TOValue alloc] initWithBytes:&rect objCType:@encode(NSRect)];
+        }
+        return nil;
+    };
+}
+
++ (id(^)(id,id))NSMakeSize
+{
+    return ^id(id w, id h) {
+        if ([w isKindOfClass:NSNumber.class] && [h isKindOfClass:NSNumber.class]) {
+            NSSize size = NSMakeSize([w floatValue], [h floatValue]);
+            return [[TOValue alloc] initWithBytes:&size objCType:@encode(NSSize)];
         }
         return nil;
     };

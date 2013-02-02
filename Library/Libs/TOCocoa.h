@@ -17,7 +17,11 @@
 + (id(^)(id))NSProtocolFromString;
 + (id(^)(id))NSLocalizedString;
 + (id(^)(id,...))NSLog;
+
 + (id(^)(id,id))NSMakeRange;
++ (id(^)(id,id))NSMakePoint;
++ (id(^)(id,id,id,id))NSMakeRect;
++ (id(^)(id,id))NSMakeSize;
 
 + (id(^)(id,id,id,id))CGRectMake;
 + (id(^)(id,id))CGSizeMake;
