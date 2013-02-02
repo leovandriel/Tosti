@@ -108,6 +108,25 @@
     };
 }
 
+#if TARGET_OS_IPHONE
+
++ (id(^)(id,id))NSMakePoint
+{
+    return [self CGPointMake];
+}
+
++ (id(^)(id,id,id,id))NSMakeRect
+{
+    return [self CGRectMake];
+}
+
++ (id(^)(id,id))NSMakeSize
+{
+    return [self CGSizeMake];
+}
+
+#else
+
 + (id(^)(id,id))NSMakePoint
 {
     return ^id(id w, id h) {
@@ -140,6 +159,7 @@
         return nil;
     };
 }
+#endif
 
 
 #pragma mark - Core Graphics
