@@ -73,6 +73,12 @@
     STAssertEqualObjects([_mem get:@"x"], @"{1, 2}", @"");
     [self eval:@"x=NSStringFromSize(NSMakeSize(2 3))"];
     STAssertEqualObjects([_mem get:@"x"], @"{2, 3}", @"");
+    [self eval:@"x=NSStringFromCGRect(CGRectMake(1 2 3 4))"];
+    STAssertEqualObjects([_mem get:@"x"], @"{{1, 2}, {3, 4}}", @"");
+    [self eval:@"x=NSStringFromCGPoint(CGPointMake(1 2))"];
+    STAssertEqualObjects([_mem get:@"x"], @"{1, 2}", @"");
+    [self eval:@"x=NSStringFromCGSize(CGSizeMake(2 3))"];
+    STAssertEqualObjects([_mem get:@"x"], @"{2, 3}", @"");
 }
 
 @end

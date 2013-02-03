@@ -30,6 +30,9 @@
 + (id(^)(id))NSStringFromRect;
 + (id(^)(id))NSStringFromPoint;
 + (id(^)(id))NSStringFromSize;
++ (id(^)(id))NSStringFromCGRect;
++ (id(^)(id))NSStringFromCGPoint;
++ (id(^)(id))NSStringFromCGSize;
 
 + (id(^)(id,id,id))dispatch_after;
 + (id(^)(id,id))dispatch_async;

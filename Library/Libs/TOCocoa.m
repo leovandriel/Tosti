@@ -213,11 +213,57 @@
 
 #pragma mark - String From
 
+#if TARGET_OS_IPHONE
+
 + (id(^)(id))NSStringFromRect
 {
     return ^id(id value) {
         if ([value isKindOfClass:TOValue.class]) {
-            if (!strcmp([value objCType], "{CGRect={CGPoint=dd}{CGSize=dd}}")) {
+            if (!strncmp([value objCType], "{CGRect", 7)) {
+                CGRect result;
+                [value getValue:&result];
+                return NSStringFromCGRect(result);
+            }
+        }
+        return nil;
+    };
+}
+
++ (id(^)(id))NSStringFromPoint
+{
+    return ^id(id value) {
+        if ([value isKindOfClass:TOValue.class]) {
+            if (!strncmp([value objCType], "{CGPoint", 8)) {
+                CGPoint result;
+                [value getValue:&result];
+                return NSStringFromCGPoint(result);
+            }
+        }
+        return nil;
+    };
+}
+
++ (id(^)(id))NSStringFromSize
+{
+    return ^id(id value) {
+        if ([value isKindOfClass:TOValue.class]) {
+            if (!strncmp([value objCType], "{CGSize", 7)) {
+                CGSize result;
+                [value getValue:&result];
+                return NSStringFromCGSize(result);
+            }
+        }
+        return nil;
+    };
+}
+
+#else
+
++ (id(^)(id))NSStringFromRect
+{
+    return ^id(id value) {
+        if ([value isKindOfClass:TOValue.class]) {
+            if (!strncmp([value objCType], "{CGRect", 7)) {
                 NSRect result;
                 [value getValue:&result];
                 return NSStringFromRect(result);
@@ -231,7 +277,7 @@
 {
     return ^id(id value) {
         if ([value isKindOfClass:TOValue.class]) {
-            if (!strcmp([value objCType], "{CGPoint=dd}")) {
+            if (!strncmp([value objCType], "{CGPoint", 8)) {
                 NSPoint result;
                 [value getValue:&result];
                 return NSStringFromPoint(result);
@@ -245,7 +291,7 @@
 {
     return ^id(id value) {
         if ([value isKindOfClass:TOValue.class]) {
-            if (!strcmp([value objCType], "{CGSize=dd}")) {
+            if (!strncmp([value objCType], "{CGSize", 7)) {
                 NSSize result;
                 [value getValue:&result];
                 return NSStringFromSize(result);
@@ -253,6 +299,23 @@
         }
         return nil;
     };
+}
+
+#endif
+
++ (id (^)(id))NSStringFromCGRect
+{
+    return [self NSStringFromRect];
+}
+
++ (id (^)(id))NSStringFromCGPoint
+{
+    return [self NSStringFromPoint];
+}
+
++ (id (^)(id))NSStringFromCGSize
+{
+    return [self NSStringFromSize];
 }
 
 
