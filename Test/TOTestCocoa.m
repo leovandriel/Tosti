@@ -65,4 +65,14 @@
     STAssertEqualObjects(_logs, @"", @"");
 }
 
+- (void)testStringFrom
+{
+    [self eval:@"x=NSStringFromRect(NSMakeRect(1 2 3 4))"];
+    STAssertEqualObjects([_mem get:@"x"], @"{{1, 2}, {3, 4}}", @"");
+    [self eval:@"x=NSStringFromPoint(NSMakePoint(1 2))"];
+    STAssertEqualObjects([_mem get:@"x"], @"{1, 2}", @"");
+    [self eval:@"x=NSStringFromSize(NSMakeSize(2 3))"];
+    STAssertEqualObjects([_mem get:@"x"], @"{2, 3}", @"");
+}
+
 @end

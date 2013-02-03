@@ -211,6 +211,51 @@
 }
 
 
+#pragma mark - String From
+
++ (id(^)(id))NSStringFromRect
+{
+    return ^id(id value) {
+        if ([value isKindOfClass:TOValue.class]) {
+            if (!strcmp([value objCType], "{CGRect={CGPoint=dd}{CGSize=dd}}")) {
+                NSRect result;
+                [value getValue:&result];
+                return NSStringFromRect(result);
+            }
+        }
+        return nil;
+    };
+}
+
++ (id(^)(id))NSStringFromPoint
+{
+    return ^id(id value) {
+        if ([value isKindOfClass:TOValue.class]) {
+            if (!strcmp([value objCType], "{CGPoint=dd}")) {
+                NSPoint result;
+                [value getValue:&result];
+                return NSStringFromPoint(result);
+            }
+        }
+        return nil;
+    };
+}
+
++ (id(^)(id))NSStringFromSize
+{
+    return ^id(id value) {
+        if ([value isKindOfClass:TOValue.class]) {
+            if (!strcmp([value objCType], "{CGSize=dd}")) {
+                NSSize result;
+                [value getValue:&result];
+                return NSStringFromSize(result);
+            }
+        }
+        return nil;
+    };
+}
+
+
 #pragma mark - Lib Dispatch
 
 + (id(^)(id,id,id))dispatch_after

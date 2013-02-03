@@ -27,6 +27,10 @@
 + (id(^)(id,id))CGSizeMake;
 + (id(^)(id,id,id,id))UIEdgeInsetsMake;
 
++ (id(^)(id))NSStringFromRect;
++ (id(^)(id))NSStringFromPoint;
++ (id(^)(id))NSStringFromSize;
+
 + (id(^)(id,id,id))dispatch_after;
 + (id(^)(id,id))dispatch_async;
 + (id(^)(id,id))dispatch_sync;
