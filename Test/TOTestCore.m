@@ -242,6 +242,8 @@
     STAssertEqualObjects([_mem get:@"x"], @"a", @"");
     [self eval:@"x=[NSString stringWithFormat:'a%@c%@e','b','d']"];
     STAssertEqualObjects([_mem get:@"x"], @"abcde", @"");
+    [self eval:@"x=['a' stringByAppendingString:'b','c','d']"];
+    STAssertEqualObjects([_mem get:@"x"], @"ab", @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 

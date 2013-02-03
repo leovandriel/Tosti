@@ -191,11 +191,10 @@ static NSUInteger const TOStackSize = 100;
             NSMethodSignature *signature = [target methodSignatureForSelector:sel];
             if (signature.numberOfArguments < arguments.count + 2) {
                 NSMutableString *s = @"".mutableCopy;
-                for (NSUInteger i = 0; i < signature.numberOfArguments; i++) {
-                    [s appendFormat:@"%c", *[signature getArgumentTypeAtIndex:i]];
-                }
-                for (NSUInteger i = 0; i < arguments.count + 2 - signature.numberOfArguments; i++) {
-                    [s appendString:@"@"];
+                char c = '@';
+                for (NSUInteger i = 0; i < arguments.count + 2; i++) {
+                    if (i < signature.numberOfArguments) c = [signature getArgumentTypeAtIndex:i][0];
+                    [s appendFormat:@"%c", c];
                 }
                 [s insertString:@"@" atIndex:0]; //bug?
                 signature = [NSMethodSignature signatureWithObjCTypes:[s cStringUsingEncoding:NSUTF8StringEncoding]];
