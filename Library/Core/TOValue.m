@@ -19,7 +19,7 @@
 
 
 @implementation TOValue {
-    NSValue *value;
+    NSValue *_value;
 }
 
 
@@ -29,7 +29,7 @@
 {
     self = [super init];
     if (self) {
-        value = [[NSValue alloc] initWithBytes:bytes objCType:type];
+        _value = [[NSValue alloc] initWithBytes:bytes objCType:type];
     }
     return self;
 }
@@ -38,29 +38,29 @@
 {
     self = [super init];
     if (self) {
-        value = [[NSValue alloc] initWithBytes:&pointer objCType:type];
+        _value = [[NSValue alloc] initWithBytes:&pointer objCType:type];
     }
     return self;
 }
 
 - (void)getValue:(void *)bytes
 {
-    [value getValue:bytes];
+    [_value getValue:bytes];
 }
 
 - (void *)pointerValue
 {
-    return [value pointerValue];
+    return [_value pointerValue];
 }
 
 - (const char *)objCType
 {
-    return [value objCType];
+    return [_value objCType];
 }
 
 - (NSString *)description
 {
-    return [value description];
+    return [_value description];
 }
 
 
