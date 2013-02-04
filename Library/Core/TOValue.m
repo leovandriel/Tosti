@@ -14,8 +14,7 @@
 #endif
 
 
-#define TOStructReturn(__struct, __prop) if (!strncmp(self.objCType, ("{"#__struct), strlen("{"#__struct))) return TOValueGet(self, __struct).__prop
-#define TONamedStructReturn(__name, __struct, __prop) if (!strncmp(self.objCType, ("{"#__name), strlen("{"#__name))) return TOValueGet(self, __struct).__prop
+#define TOStructReturn(__type, __prop) if (strcmp(self.objCType, @encode(__type)) == 0) return TOValueGet(self, __type).__prop
 
 
 @implementation TOValue {
@@ -68,13 +67,13 @@
 
 - (NSUInteger)length
 {
-    TONamedStructReturn(_NSRange, NSRange, length);
+    TOStructReturn(NSRange, length);
     return 0;
 }
 
 - (NSUInteger)location
 {
-    TONamedStructReturn(_NSRange, NSRange, location);
+    TOStructReturn(NSRange, location);
     return 0;
 }
 
@@ -83,37 +82,61 @@
 
 - (CGPoint)origin
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(CGRect, origin);
+#else
+    TOStructReturn(NSRect, origin);
+#endif
     return CGPointZero;
 }
 
 - (CGSize)size
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(CGRect, size);
+#else
+    TOStructReturn(NSRect, size);
+#endif
     return CGSizeZero;
 }
 
 - (CGFloat)x
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(CGPoint, x);
+#else
+    TOStructReturn(NSPoint, x);
+#endif
     return 0.f;
 }
 
 - (CGFloat)y
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(CGPoint, y);
+#else
+    TOStructReturn(NSPoint, y);
+#endif
     return 0.f;
 }
 
 - (CGFloat)width
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(CGSize, width);
+#else
+    TOStructReturn(NSSize, width);
+#endif
     return 0.f;
 }
 
 - (CGFloat)height
 {
+#if TARGET_OS_IPHONE
     TOStructReturn(CGSize, height);
+#else
+    TOStructReturn(NSSize, height);
+#endif
     return 0.f;
 }
 
