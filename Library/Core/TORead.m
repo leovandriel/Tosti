@@ -9,14 +9,14 @@
 #import "TOMem.h"
 
 
-static NSString *TOTypeMethod       = @"m";
-static NSString *TOTypeAssignment   = @"a";
-static NSString *TOTypeValue        = @"v";
-static NSString *TOTypeReference    = @"r";
-static NSString *TOTypeScope        = @"s";
-static NSString *TOTypeBlock        = @"b";
-static NSString *TOTypeInvoke       = @"i";
-static NSString *TOTypeReturn       = @"e";
+static NSString *const TOTypeMethod       = @"m";
+static NSString *const TOTypeAssignment   = @"a";
+static NSString *const TOTypeValue        = @"v";
+static NSString *const TOTypeReference    = @"r";
+static NSString *const TOTypeScope        = @"s";
+static NSString *const TOTypeBlock        = @"b";
+static NSString *const TOTypeInvoke       = @"i";
+static NSString *const TOTypeReturn       = @"e";
 
 
 @implementation TORead{

@@ -10,7 +10,19 @@
 #import "TOValue.h"
 
 
+#define TO_EIGHT(__d,__e) __d(0) __e __d(1) __e __d(2) __e __d(3) __e __d(4) __e __d(5) __e __d(6) __e __d(7)
+
+static const char TOTypeMethod       = 'm';
+static const char TOTypeAssignment   = 'a';
+static const char TOTypeValue        = 'v';
+static const char TOTypeReference    = 'r';
+static const char TOTypeScope        = 's';
+static const char TOTypeBlock        = 'b';
+static const char TOTypeInvoke       = 'i';
+static const char TOTypeReturn       = 'e';
+
 static NSUInteger const TOStackSize = 100;
+
 
 @implementation TOEval {
     const char *_code;
@@ -56,7 +68,7 @@ static NSUInteger const TOStackSize = 100;
 }
 
 
-#pragma mark - Running
+#pragma mark - Evaluation
 
 - (id)resolve:(id)target
 {
@@ -78,133 +90,172 @@ static NSUInteger const TOStackSize = 100;
     } else {
         char type = statement.count > 0 ? [statement[0] characterAtIndex:0] : '\0';
         switch (type) {
-            case 'a': { // assignment
-                id target = statement.count > 2 ? statement[2] : nil;
-                id value = statement.count > 3 ? [self evalStatement:statement[3]] : nil;
-                if ([target isKindOfClass:NSArray.class]) {
-                    if ([target count] == 4 && [target[0] characterAtIndex:0] == 'm') {
-                        id t = [self resolve:target[2]];
-                        NSString *s = [[NSString alloc] initWithFormat:@"set%@%@:", [target[3] substringToIndex:1].uppercaseString, [target[3] substringFromIndex:1]];
-                        result = [self performOnTarget:t selectorString:s arguments:@[value] index:index];
-                    } else if ([target count] == 4 && [target[0] characterAtIndex:0] == 'r') {
-                        id t = [self resolve:target[2]];
-                        id sub = [self resolve:target[3]];
-                        if ([t isKindOfClass:NSMutableArray.class]) {
-                            if ([sub isKindOfClass:NSNumber.class]) {
-                                NSUInteger i = [sub unsignedIntegerValue];
-                                if (i <= [t count]) t[i] = value;
-                                else [self logAt:index line:@"Index out-of-bounds '%u'", i];
-                            } else [self logAt:index line:@"Invalid array index '%@'", sub];
-                        } else if ([t isKindOfClass:NSMutableDictionary.class]) {
-                            if (sub) t[sub] = value;
-                            else [self logAt:index line:@"Invalid dictionary key '%@'", sub];
-                        } else if (t) [self logAt:index line:@"Object not assignable '%@'", t];
-                    } else [self logAt:index line:@"Not assignable"];
-                } else if ([target isKindOfClass:NSString.class]) [_mem set:value name:target];
-                result = value;
-            } break;
-            case 'b': { // block
-                NSArray *scope = statement.count > 2 ? statement[2] : nil;
-                NSArray *arguments = statement.count > 3 ? statement[3] : nil;
-                id(^block)(id, id, id, id, id, id, id, id) = ^(__unsafe_unretained id v0, __unsafe_unretained id v1, __unsafe_unretained id v2, __unsafe_unretained id v3, __unsafe_unretained id v4, __unsafe_unretained id v5, __unsafe_unretained id v6, __unsafe_unretained id v7){
-#define TO_EIGHT(__d,__e) __d(0) __e __d(1) __e __d(2) __e __d(3) __e __d(4) __e __d(5) __e __d(6) __e __d(7)
-#define TO_BLOCK_A(__i) if (arguments.count > __i) [_mem set:v0 name:arguments[__i]]
-                    TO_EIGHT(TO_BLOCK_A, ;);
-                    return [self evalStatement:scope];
-                };
-                result = [block copy];
-            } break;
-            case 'i': { // invoke
-                id target = [self resolve:statement.count > 2 ? statement[2]: nil];
-                NSArray *arguments = statement.count > 3 ? statement[3] : nil;
-                NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:arguments.count];
-                for (id argument in arguments) {
-                    id value = [self evalStatement:argument == TONil ? nil : argument];
-                    [values addObject:value ? value : TONil];
-                }
-                id (^block)(id, id, id, id, id, id, id, id) = (id(^)(id, id, id, id, id, id, id, id))target;
-#define TO_BLOCK_B(__i) id v##__i = values.count > __i && values[__i] != TONil ? values[__i] : nil
-                TO_EIGHT(TO_BLOCK_B, ;);
-                if (block) result = block(v0, v1, v2, v3, v4, v5, v6, v7);
-            } break;
-            case 'm': { // method
-                id target = [self resolve:statement.count > 2 ? statement[2]: nil];
-                NSString *selector = statement.count > 3 ? statement[3] : nil;
-                NSArray *arguments = statement.count > 4 ? statement[4] : nil;
-                NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:arguments.count];
-                for (id argument in arguments) {
-                    id value = [self evalStatement:argument == TONil ? nil : argument];
-                    [values addObject:value ? value : TONil];
-                }
-                result = [self performOnTarget:target selectorString:selector arguments:values index:index];
-            } break;
-            case 'r': { // reference
-                id target = [self resolve:statement.count > 2 ? statement[2]: nil];
-                if (statement.count > 3) {
-                    id sub = [self evalStatement:statement[3]];
-                    if ([target isKindOfClass:NSArray.class]) {
-                        if ([sub isKindOfClass:NSNumber.class]) {
-                            NSUInteger i = [sub unsignedIntegerValue];
-                            if (i <= [target count]) result = target[i];
-                            else [self logAt:index line:@"Index out-of-bounds '%u'", i];
-                        } else [self logAt:index line:@"Invalid array index '%@'", sub];
-                    } else if ([target isKindOfClass:NSDictionary.class]) {
-                        if (sub) result = target[sub];
-                        else [self logAt:index line:@"Invalid dictionary key '%@'", sub];
-                    }
-                } else result = target;
-            } break;
-            case 's': { // scope
-                NSArray *scope = statement.count > 2 ? statement[2] : nil;
-                BOOL log = NO;
-                for (NSArray *s in scope) {
-                    if (log) [self.delegate log:result]; log = NO;
-                    BOOL brk = NO;
-                    if ([s isKindOfClass:NSArray.class]) {
-                        char t = s.count > 0 ? [s[0] characterAtIndex:0] : '\0';
-                        switch (t) {
-                            case 'e': result = s.count > 2 ? [self evalStatement:s[2]] : nil; brk = YES; break;
-                            case 'v': case 'r': log = YES; // fallthrough
-                            default: result = [self evalStatement:s]; break;
-                        }
-                    } else [self logAt:index line:@"Unknown statement '%@'", s];
-                    if (brk) break;
-                }
-            } break;
-            case 'v': { // value
-                char type = statement.count > 2 ? [statement[2] characterAtIndex:0] : '\0';
-                id value = statement.count > 3 ? statement[3] : nil;
-                switch (type) {
-                    case 'a': {
-                        result = [[NSMutableArray alloc] initWithCapacity:[value count]];
-                        for (id s in value) {
-                            id value = [self evalStatement:s];
-                            [result addObject:value ? value : NSNull.null];
-                        }
-                    } break;
-                    case 'd': {
-                        result = [[NSMutableDictionary alloc] initWithCapacity:[value count]];
-                        for (NSArray *pair in value) {
-                            id key = [self evalStatement:pair[0]];
-                            id value = pair.count > 1 ? [self evalStatement:pair[1]] : nil;
-                            result[key ? key : NSNull.null] = value ? value : NSNull.null;
-                        }
-                    } break;
-                    case 's': result = [self evalStatement:value]; break;
-                    case 'v': result = value; break;
-                    case 'l': {
-                        SEL s = NSSelectorFromString(value);
-                        result = [[TOValue alloc] initWithBytes:&s objCType:":"];
-                    } break;
-                    default: [self logAt:index line:@"Unknown value type '%c'", type]; result = value;
-                }
-            } break;
+            case TOTypeAssignment: result = [self evalAssignment:statement index:index]; break;
+            case TOTypeBlock: result = [self evalBlock:statement index:index]; break;
+            case TOTypeInvoke: result = [self evalInvoke:statement index:index]; break;
+            case TOTypeMethod: result = [self evalMethod:statement index:index]; break;
+            case TOTypeReference: result = [self evalReference:statement index:index]; break;
+            case TOTypeScope: result = [self evalScope:statement index:index]; break;
+            case TOTypeValue: result = [self evalValue:statement index:index]; break;
             default: [self logAt:index line:@"Unknown statement type '%@'", statement[0]]; break;
         }
     }
     _depth--;
     return result;
 }
+
+- (id)evalAssignment:(NSArray *)statement index:(NSUInteger)index
+{
+    id result = nil;
+    id target = statement.count > 2 ? statement[2] : nil;
+    id value = statement.count > 3 ? [self evalStatement:statement[3]] : nil;
+    if ([target isKindOfClass:NSArray.class]) {
+        if ([target count] == 4 && [target[0] characterAtIndex:0] == TOTypeMethod) {
+            id t = [self resolve:target[2]];
+            NSString *s = [[NSString alloc] initWithFormat:@"set%@%@:", [target[3] substringToIndex:1].uppercaseString, [target[3] substringFromIndex:1]];
+            result = [self performOnTarget:t selectorString:s arguments:@[value] index:index];
+        } else if ([target count] == 4 && [target[0] characterAtIndex:0] == TOTypeReference) {
+            id t = [self resolve:target[2]];
+            id sub = [self resolve:target[3]];
+            if ([t isKindOfClass:NSMutableArray.class]) {
+                if ([sub isKindOfClass:NSNumber.class] && value) {
+                    NSUInteger i = [sub unsignedIntegerValue];
+                    if (i <= [t count]) t[i] = value;
+                    else [self logAt:index line:@"Index out-of-bounds '%u'", i];
+                } else if (value) [self logAt:index line:@"Invalid array index '%@'", sub];
+                else [self logAt:index line:@"Unable to assign nil to array"];
+            } else if ([t isKindOfClass:NSMutableDictionary.class]) {
+                if (sub && value) t[sub] = value;
+                else if (value) [self logAt:index line:@"Invalid dictionary key '%@'", sub];
+                else [self logAt:index line:@"Unable to assign nil to dictionary"];
+            } else if (t) [self logAt:index line:@"Object not assignable '%@'", t];
+        } else [self logAt:index line:@"Not assignable"];
+    } else if ([target isKindOfClass:NSString.class]) [_mem set:value name:target];
+    result = value;
+    return result;
+}
+
+- (id)evalBlock:(NSArray *)statement index:(NSUInteger)index
+{
+    id result = nil;
+    NSArray *scope = statement.count > 2 ? statement[2] : nil;
+    NSArray *arguments = statement.count > 3 ? statement[3] : nil;
+    id(^block)(id, id, id, id, id, id, id, id) = ^(__unsafe_unretained id v0, __unsafe_unretained id v1, __unsafe_unretained id v2, __unsafe_unretained id v3, __unsafe_unretained id v4, __unsafe_unretained id v5, __unsafe_unretained id v6, __unsafe_unretained id v7){
+#define TO_BLOCK_A(__i) if (arguments.count > __i) [_mem set:v0 name:arguments[__i]]
+        TO_EIGHT(TO_BLOCK_A, ;);
+        return [self evalStatement:scope];
+    };
+    result = [block copy];
+    return result;
+}
+
+- (id)evalInvoke:(NSArray *)statement index:(NSUInteger)index
+{
+    id result = nil;
+    id target = [self resolve:statement.count > 2 ? statement[2]: nil];
+    NSArray *arguments = statement.count > 3 ? statement[3] : nil;
+    NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:arguments.count];
+    for (id argument in arguments) {
+        id value = [self evalStatement:argument == TONil ? nil : argument];
+        [values addObject:value ? value : TONil];
+    }
+    id (^block)(id, id, id, id, id, id, id, id) = (id(^)(id, id, id, id, id, id, id, id))target;
+#define TO_BLOCK_B(__i) id v##__i = values.count > __i && values[__i] != TONil ? values[__i] : nil
+    TO_EIGHT(TO_BLOCK_B, ;);
+    if (block) result = block(v0, v1, v2, v3, v4, v5, v6, v7);
+    return result;
+}
+
+- (id)evalMethod:(NSArray *)statement index:(NSUInteger)index
+{
+    id result = nil;
+    id target = [self resolve:statement.count > 2 ? statement[2]: nil];
+    NSString *selector = statement.count > 3 ? statement[3] : nil;
+    NSArray *arguments = statement.count > 4 ? statement[4] : nil;
+    NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:arguments.count];
+    for (id argument in arguments) {
+        id value = [self evalStatement:argument == TONil ? nil : argument];
+        [values addObject:value ? value : TONil];
+    }
+    result = [self performOnTarget:target selectorString:selector arguments:values index:index];
+    return result;
+}
+
+- (id)evalReference:(NSArray *)statement index:(NSUInteger)index
+{
+    id result = nil;
+    id target = [self resolve:statement.count > 2 ? statement[2]: nil];
+    if (statement.count > 3) {
+        id sub = [self evalStatement:statement[3]];
+        if ([target isKindOfClass:NSArray.class]) {
+            if ([sub isKindOfClass:NSNumber.class]) {
+                NSUInteger i = [sub unsignedIntegerValue];
+                if (i <= [target count]) result = target[i];
+                else [self logAt:index line:@"Index out-of-bounds '%u'", i];
+            } else [self logAt:index line:@"Invalid array index '%@'", sub];
+        } else if ([target isKindOfClass:NSDictionary.class]) {
+            if (sub) result = target[sub];
+            else [self logAt:index line:@"Invalid dictionary key '%@'", sub];
+        }
+    } else result = target;
+    return result;
+}
+
+- (id)evalScope:(NSArray *)statement index:(NSUInteger)index
+{
+    id result = nil;
+    NSArray *scope = statement.count > 2 ? statement[2] : nil;
+    BOOL log = NO;
+    for (NSArray *s in scope) {
+        if (log) [self.delegate log:result]; log = NO;
+        BOOL brk = NO;
+        if ([s isKindOfClass:NSArray.class]) {
+            char t = s.count > 0 ? [s[0] characterAtIndex:0] : '\0';
+            switch (t) {
+                case TOTypeReturn: result = s.count > 2 ? [self evalStatement:s[2]] : nil; brk = YES; break;
+                case TOTypeValue: case TOTypeReference: log = YES; // fallthrough
+                default: result = [self evalStatement:s]; break;
+            }
+        } else [self logAt:index line:@"Unknown statement '%@'", s];
+        if (brk) break;
+    }
+    return result;
+}
+
+- (id)evalValue:(NSArray *)statement index:(NSUInteger)index
+{
+    id result = nil;
+    char type = statement.count > 2 ? [statement[2] characterAtIndex:0] : '\0';
+    id value = statement.count > 3 ? statement[3] : nil;
+    switch (type) {
+        case 'a': {
+            result = [[NSMutableArray alloc] initWithCapacity:[value count]];
+            for (id s in value) {
+                id value = [self evalStatement:s];
+                [result addObject:value ? value : NSNull.null];
+            }
+        } break;
+        case 'd': {
+            result = [[NSMutableDictionary alloc] initWithCapacity:[value count]];
+            for (NSArray *pair in value) {
+                id key = [self evalStatement:pair[0]];
+                id value = pair.count > 1 ? [self evalStatement:pair[1]] : nil;
+                result[key ? key : NSNull.null] = value ? value : NSNull.null;
+            }
+        } break;
+        case TOTypeScope: result = [self evalStatement:value]; break;
+        case TOTypeValue: result = value; break;
+        case 'l': {
+            SEL s = NSSelectorFromString(value);
+            result = [[TOValue alloc] initWithBytes:&s objCType:":"];
+        } break;
+        default: [self logAt:index line:@"Unknown value type '%c'", type]; result = value;
+    }
+    return result;
+}
+
+
+#pragma mark - Message sending
 
 - (id)performOnTarget:(id)target selectorString:(NSString *)selector arguments:(NSArray *)arguments index:(NSUInteger)index
 {
