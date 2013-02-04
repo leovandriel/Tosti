@@ -8,7 +8,8 @@
 #import <Foundation/Foundation.h>
 
 
-#define TOValueGet(__value, __type) ({__type __x; [self getValue:&__x]; __x;})
+#define TOValueGet(__value, __type) ({__type __x; [(__value) getValue:&__x]; __x;})
+#define TOValueIsType(__value, __type) (strcmp([(__value) objCType], @encode(__type)) == 0)
 
 
 @interface TOValue : NSObject

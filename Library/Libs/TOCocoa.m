@@ -39,12 +39,8 @@
 + (id(^)(id))NSStringFromSelector
 {
     return ^id(id value) {
-        if ([value isKindOfClass:TOValue.class]) {
-            if (!strcmp([value objCType], ":")) {
-                SEL selector;
-                [value getValue:&selector];
-                return NSStringFromSelector(selector);
-            }
+        if ([value isKindOfClass:TOValue.class] && TOValueIsType(value, SEL)) {
+            return NSStringFromSelector(TOValueGet(value, SEL));
         }
         return nil;
     };
@@ -218,12 +214,8 @@
 + (id(^)(id))NSStringFromRect
 {
     return ^id(id value) {
-        if ([value isKindOfClass:TOValue.class]) {
-            if (!strncmp([value objCType], "{CGRect", 7)) {
-                CGRect result;
-                [value getValue:&result];
-                return NSStringFromCGRect(result);
-            }
+        if ([value isKindOfClass:TOValue.class] && TOValueIsType(value, CGRect)) {
+            return NSStringFromCGRect(TOValueGet(value, CGRect));
         }
         return nil;
     };
@@ -232,12 +224,8 @@
 + (id(^)(id))NSStringFromPoint
 {
     return ^id(id value) {
-        if ([value isKindOfClass:TOValue.class]) {
-            if (!strncmp([value objCType], "{CGPoint", 8)) {
-                CGPoint result;
-                [value getValue:&result];
-                return NSStringFromCGPoint(result);
-            }
+        if ([value isKindOfClass:TOValue.class] && TOValueIsType(value, CGPoint)) {
+            return NSStringFromCGPoint(TOValueGet(value, CGPoint));
         }
         return nil;
     };
@@ -246,12 +234,8 @@
 + (id(^)(id))NSStringFromSize
 {
     return ^id(id value) {
-        if ([value isKindOfClass:TOValue.class]) {
-            if (!strncmp([value objCType], "{CGSize", 7)) {
-                CGSize result;
-                [value getValue:&result];
-                return NSStringFromCGSize(result);
-            }
+        if ([value isKindOfClass:TOValue.class] && TOValueIsType(value, CGSize)) {
+            return NSStringFromCGSize(TOValueGet(value, CGSize));
         }
         return nil;
     };
@@ -262,12 +246,8 @@
 + (id(^)(id))NSStringFromRect
 {
     return ^id(id value) {
-        if ([value isKindOfClass:TOValue.class]) {
-            if (!strncmp([value objCType], "{CGRect", 7)) {
-                NSRect result;
-                [value getValue:&result];
-                return NSStringFromRect(result);
-            }
+        if ([value isKindOfClass:TOValue.class] && TOValueIsType(value, NSRect)) {
+            return NSStringFromRect(TOValueGet(value, NSRect));
         }
         return nil;
     };
@@ -276,12 +256,8 @@
 + (id(^)(id))NSStringFromPoint
 {
     return ^id(id value) {
-        if ([value isKindOfClass:TOValue.class]) {
-            if (!strncmp([value objCType], "{CGPoint", 8)) {
-                NSPoint result;
-                [value getValue:&result];
-                return NSStringFromPoint(result);
-            }
+        if ([value isKindOfClass:TOValue.class] && TOValueIsType(value, NSPoint)) {
+            return NSStringFromPoint(TOValueGet(value, NSPoint));
         }
         return nil;
     };
@@ -290,12 +266,8 @@
 + (id(^)(id))NSStringFromSize
 {
     return ^id(id value) {
-        if ([value isKindOfClass:TOValue.class]) {
-            if (!strncmp([value objCType], "{CGSize", 7)) {
-                NSSize result;
-                [value getValue:&result];
-                return NSStringFromSize(result);
-            }
+        if ([value isKindOfClass:TOValue.class] && TOValueIsType(value, NSSize)) {
+            return NSStringFromSize(TOValueGet(value, NSSize));
         }
         return nil;
     };
