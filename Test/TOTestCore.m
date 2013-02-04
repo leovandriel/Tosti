@@ -125,6 +125,12 @@
     STAssertEqualObjects([_mem get:@"x"], @"test", @"");
     [self eval:@"x=3"];
     STAssertEqualObjects([_mem get:@"x"], @3, @"");
+    [self eval:@"x='' x.string='b'.description"];
+    STAssertEqualObjects([_mem get:@"x"], @"b", @"");
+    [self eval:@"x=@[] x[0]='b'"];
+    STAssertEqualObjects([_mem get:@"x"], @[@"b"], @"");
+    [self eval:@"x=@{} x['a']='b'"];
+    STAssertEqualObjects([_mem get:@"x"], @{@"a":@"b"}, @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 
@@ -136,8 +142,6 @@
     STAssertEqualObjects([_mem get:@"x"], @"A", @"");
     [self eval:@"x=['B' lowercaseString].uppercaseString"];
     STAssertEqualObjects([_mem get:@"x"], @"B", @"");
-    [self eval:@"x.string='b'.description"];
-    STAssertEqualObjects([_mem get:@"x"], @"b", @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 

@@ -104,13 +104,7 @@ static NSString *TOTypeReturn       = @"e";
                 case '=': {
                     id statement = [self statement];
                     if (statement) {
-                        if ([result isKindOfClass:NSArray.class]) {
-                            if ([result count] == 4 && result[0] == TOTypeMethod) {
-                                NSString *selector = result[3];
-                                selector = [[NSString alloc] initWithFormat:@"set%@%@:", [selector substringToIndex:1].uppercaseString, [selector substringFromIndex:1]];
-                                return @[TOTypeMethod, @(start), result[2], selector, @[statement]];
-                            } else [self logExpect:@"expecting assignable"];
-                        } else return @[TOTypeAssignment, @(start), result, statement];
+                            return @[TOTypeAssignment, @(start), result, statement];
                     } else [self logExpect:@"expecting statement to assign"];
                 } break;
                 case '.': {
