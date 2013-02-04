@@ -81,6 +81,14 @@
     STAssertEqualObjects([_mem get:@"x"], @"1'", @"");
     [self eval:@"x=@'\\'1'"];
     STAssertEqualObjects([_mem get:@"x"], @"'1", @"");
+    [self eval:@"x=-1"];
+    STAssertEqualObjects([_mem get:@"x"], @-1, @"");
+    [self eval:@"x=.1"];
+    STAssertEqualObjects([_mem get:@"x"], @.1, @"");
+    [self eval:@"x=1.1"];
+    STAssertEqualObjects([_mem get:@"x"], @1.1, @"");
+    [self eval:@"x=-.1"];
+    STAssertEqualObjects([_mem get:@"x"], @-.1, @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 

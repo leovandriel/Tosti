@@ -91,7 +91,7 @@ static NSString *TOTypeReturn       = @"e";
         case '^': result = [self block]; break;
         case '{': result = [self scope]; break;
         case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9':
-        case '.': case '"': case '\'': case '@': result = [self value]; break;
+        case '-': case '+': case '.': case '"': case '\'': case '@': result = [self value]; break;
         default: result = [self nameWith:'_']; break;
     }
     [self space];
@@ -242,7 +242,7 @@ static NSString *TOTypeReturn       = @"e";
     }
     const char *s = _chars + _index;
     for (char c = *s; c; c = *++s) {
-        if (('a' > c || c > 'z') && ('A' > c || c > 'Z') && ('0' > c || c > '9') && c != '_' && c != '.') break;
+        if (('a' > c || c > 'z') && ('A' > c || c > 'Z') && ('0' > c || c > '9') && c != '_' && c != '.' && c != '-' && c != '+') break;
     }
     NSUInteger length = s - _chars - _index;
     if (length) {
