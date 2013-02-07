@@ -207,7 +207,7 @@ static NSUInteger const TOStackSize = 100;
     NSArray *scope = statement.count > 2 ? statement[2] : nil;
     BOOL log = NO;
     for (NSArray *s in scope) {
-        if (log) [self.delegate log:result]; log = NO;
+        // if (log) [self.delegate log:result]; log = NO;
         BOOL brk = NO;
         if ([s isKindOfClass:NSArray.class]) {
             char t = s.count > 0 ? [s[0] characterAtIndex:0] : '\0';
