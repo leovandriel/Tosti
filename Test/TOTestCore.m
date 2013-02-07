@@ -30,9 +30,9 @@
     _logs = [_logs stringByAppendingFormat:@"%@\n", line];
 }
 
-- (void)eval:(NSString *)code
+- (id)eval:(NSString *)code
 {
-    [_mem eval:code delegate:self];
+    return [_mem eval:code delegate:self];
 }
 
 
@@ -94,31 +94,22 @@
 
 - (void)testArray
 {
-    [self eval:@"x=@[]"];
-    STAssertEqualObjects([_mem get:@"x"], @[], @"");
-    [self eval:@"x=@[@1]"];
-    STAssertEqualObjects([_mem get:@"x"], @[@1], @"");
-    [self eval:@"x = @ [ @ \"1\" , @ 1 ] "]; id x = @ [ @ "1" , @ 1 ];
-    STAssertEqualObjects([_mem get:@"x"], x, @"");
+    STAssertEqualObjects([self eval:@"@[]"], @[], @"");
+    STAssertEqualObjects([self eval:@"@[@1]"], @[@1], @"");
+    id x = @ [ @ "1" , @ 1 ]; STAssertEqualObjects([self eval:@"@ [ @ \"1\" , @ 1 ] "], x, @"");
     [self eval:@"x=@[1]x=x[0]"];
     STAssertEqualObjects([_mem get:@"x"], @1, @"");
-    [self eval:@"x=@[1 2][1]"];
-    STAssertEqualObjects([_mem get:@"x"], @2, @"");
+    STAssertEqualObjects([self eval:@"@[1 2][1]"], @2, @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 
 - (void)testDictionary
 {
-    [self eval:@"x=@{}"];
-    STAssertEqualObjects([_mem get:@"x"], @{}, @"");
-    [self eval:@"x=@{@1}"];
-    STAssertEqualObjects([_mem get:@"x"], @{@1:NSNull.null}, @"");
-    [self eval:@"x=@{@1:}"];
-    STAssertEqualObjects([_mem get:@"x"], @{@1:NSNull.null}, @"");
-    [self eval:@"x=@{@1:@2}"];
-    STAssertEqualObjects([_mem get:@"x"], @{@1:@2}, @"");
-    [self eval:@"x=@{@\"1\":@\"2\",@1:@2}"]; id x = @{@"1":@"2",@1:@2};
-    STAssertEqualObjects([_mem get:@"x"], x, @"");
+    STAssertEqualObjects([self eval:@"@{}"], @{}, @"");
+    STAssertEqualObjects([self eval:@"@{@1}"], @{@1:NSNull.null}, @"");
+    STAssertEqualObjects([self eval:@"@{@1:}"], @{@1:NSNull.null}, @"");
+    STAssertEqualObjects([self eval:@"@{@1:@2}"], @{@1:@2}, @"");
+    id x = @{@"1":@"2",@1:@2}; STAssertEqualObjects([self eval:@"@{@\"1\":@\"2\",@1:@2}"], x, @"");
     [self eval:@"x = @ { 1 : 2 } x = x[ 1 ] "];
     STAssertEqualObjects([_mem get:@"x"], @ 2, @"");
     STAssertEqualObjects(_logs, @"", @"");
@@ -209,31 +200,23 @@
 
 - (void)testClass
 {
-    [self eval:@"x=[[NSArray alloc]init]"];
-    STAssertEqualObjects([_mem get:@"x"], @[], @"");
-    [self eval:@"x=[NSArray array]"];
-    STAssertEqualObjects([_mem get:@"x"], @[], @"");
-    [self eval:@"x=[[NSArray arrayWithObject:x]count]"];
-    STAssertEqualObjects([_mem get:@"x"], @1, @"");
+    STAssertEqualObjects([self eval:@"[[NSArray alloc]init]"], @[], @"");
+    STAssertEqualObjects([self eval:@"[NSArray array]"], @[], @"");
+    STAssertEqualObjects([self eval:@"[[NSArray arrayWithObject:@[]]count]"], @1, @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 
 - (void)testString
 {
     [self eval:@"a='test'"];
-    [self eval:@"v1=[a length]"];
-    STAssertEqualObjects([_mem get:@"v1"], @4, @"");
-    [self eval:@"v2=[a stringByReplacingOccurrencesOfString:'st'withString:'sted']"];
-    STAssertEqualObjects([_mem get:@"v2"], @"tested", @"");
-    
-    [self eval:@"b='ing' v2=[a stringByAppendingString:b]"];
-    STAssertEqualObjects([_mem get:@"v2"], @"testing", @"");
-    
-    [self eval:@"x=[['test'stringByAppendingString:'ing..']stringByAppendingString:[v2 stringByAppendingString:'..']]"];
+    STAssertEqualObjects([self eval:@"[a length]"], @4, @"");
+    STAssertEqualObjects([self eval:@"[a stringByReplacingOccurrencesOfString:'st'withString:'sted']"], @"tested", @"");
+    [self eval:@"b='ing' x=[a stringByAppendingString:b]"];
+    STAssertEqualObjects([_mem get:@"x"], @"testing", @"");
+    [self eval:@"x=[['test'stringByAppendingString:'ing..']stringByAppendingString:[x stringByAppendingString:'..']]"];
     STAssertEqualObjects([_mem get:@"x"], @"testing..testing..", @"");
-    
-    [self eval:@"v4=4 v3=[v2 substringFromIndex:v4]"];
-    STAssertEqualObjects([_mem get:@"v3"], @"ing", @"");
+    [self eval:@"y=10 x=[x substringFromIndex:y]"];
+    STAssertEqualObjects([_mem get:@"x"], @"esting..", @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 
@@ -242,20 +225,13 @@
 
 - (void)testSelector
 {
-    [self eval:@"x=['a' performSelector:@selector(uppercaseString)]"];
-    STAssertEqualObjects([_mem get:@"x"], @"A", @"");
-    [self eval:@"x=['a' performSelector:@selector(stringByAppendingString:) withObject:'b']"];
-    STAssertEqualObjects([_mem get:@"x"], @"ab", @"");
-    [self eval:@"x=['a' performSelector:@uppercaseString]"];
-    STAssertEqualObjects([_mem get:@"x"], @"A", @"");
-    [self eval:@"x=[@['b' 'a'] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)]"];
-    id x = @[@"a",@"b"]; STAssertEqualObjects([_mem get:@"x"], x, @"");
-    [self eval:@"x=[NSString stringWithFormat:'a']"];
-    STAssertEqualObjects([_mem get:@"x"], @"a", @"");
-    [self eval:@"x=[NSString stringWithFormat:'a%@c%@e','b','d']"];
-    STAssertEqualObjects([_mem get:@"x"], @"abcde", @"");
-    [self eval:@"x=['a' stringByAppendingString:'b','c','d']"];
-    STAssertEqualObjects([_mem get:@"x"], @"ab", @"");
+    STAssertEqualObjects([self eval:@"['a' performSelector:@selector(uppercaseString)]"], @"A", @"");
+    STAssertEqualObjects([self eval:@"['a' performSelector:@selector(stringByAppendingString:) withObject:'b']"], @"ab", @"");
+    STAssertEqualObjects([self eval:@"['a' performSelector:@uppercaseString]"], @"A", @"");
+    id x = @[@"a",@"b"]; STAssertEqualObjects([self eval:@"[@['b' 'a'] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)]"], x, @"");
+    STAssertEqualObjects([self eval:@"[NSString stringWithFormat:'a']"], @"a", @"");
+    STAssertEqualObjects([self eval:@"[NSString stringWithFormat:'a%@c%@e','b','d']"], @"abcde", @"");
+    STAssertEqualObjects([self eval:@"['a' stringByAppendingString:'b','c','d']"], @"ab", @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 
@@ -287,24 +263,15 @@
 - (void)testMath
 {
     [self eval:@"TO.load(_mem, TOMath)"];
-    [self eval:@"x=add()"];
-    STAssertEqualObjects([_mem get:@"x"], @0, @"");
-    [self eval:@"x=add(1)"];
-    STAssertEqualObjects([_mem get:@"x"], @1, @"");
-    [self eval:@"x=add(1 2)"];
-    STAssertEqualObjects([_mem get:@"x"], @3, @"");
-    [self eval:@"x=add(1 2 3)"];
-    STAssertEqualObjects([_mem get:@"x"], @3, @"");
-    [self eval:@"x=add(@[])"];
-    STAssertEqualObjects([_mem get:@"x"], @0, @"");
-    [self eval:@"x=add(@[1])"];
-    STAssertEqualObjects([_mem get:@"x"], @1, @"");
-    [self eval:@"x=add(@[1 2])"];
-    STAssertEqualObjects([_mem get:@"x"], @3, @"");
-    [self eval:@"x=add(@[1 2 3])"];
-    STAssertEqualObjects([_mem get:@"x"], @6, @"");
-    [self eval:@"x=add('1' 2)"];
-    STAssertEqualObjects([_mem get:@"x"], @0, @"");
+    STAssertEqualObjects([self eval:@"add()"], @0, @"");
+    STAssertEqualObjects([self eval:@"add(1)"], @1, @"");
+    STAssertEqualObjects([self eval:@"add(1 2)"], @3, @"");
+    STAssertEqualObjects([self eval:@"add(1 2 3)"], @3, @"");
+    STAssertEqualObjects([self eval:@"add(@[])"], @0, @"");
+    STAssertEqualObjects([self eval:@"add(@[1])"], @1, @"");
+    STAssertEqualObjects([self eval:@"add(@[1 2])"], @3, @"");
+    STAssertEqualObjects([self eval:@"add(@[1 2 3])"], @6, @"");
+    STAssertEqualObjects([self eval:@"add('1' 2)"], @0, @"");
     STAssertEqualObjects(_logs, @"", @"");
 }
 
