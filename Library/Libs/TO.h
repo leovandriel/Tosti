@@ -20,4 +20,9 @@
 + (id(^)(id))superOf;
 + (id(^)(id,id,id,id))load;
 
++ (id)_YES;
++ (id)_NO;
++ (id)_true;
++ (id)_false;
+
 @end

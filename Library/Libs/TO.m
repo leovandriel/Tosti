@@ -84,15 +84,16 @@
                 for (NSString *selector in [TO selectorsForObject:target]) {
                     SEL sel = NSSelectorFromString(selector);
                     NSMethodSignature *signature = [target methodSignatureForSelector:sel];
-                    if (signature.numberOfArguments == 2 && !strcmp(signature.methodReturnType, @encode(void(^)(void))) && [target respondsToSelector:sel]) {
+                    if (signature.numberOfArguments == 2 && [target respondsToSelector:sel]) {
                         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
                         [invocation setSelector:sel];
+                        NSString *name = [selector hasPrefix:@"_"] ? [selector substringFromIndex:1] : selector;
                         @try {
                             [invocation invokeWithTarget:target];
                             id value = nil;
                             [invocation getReturnValue:&value];
-                            [mem set:value name:selector];
-                            [result addObject:selector];
+                            [mem set:value name:name];
+                            [result addObject:name];
                         } @catch (NSException *exception) {}
                     }
                 }
@@ -101,6 +102,26 @@
         }
         return nil;
     };
+}
+
++ (id)_YES
+{
+    return @(YES);
+}
+
++ (id)_NO
+{
+    return @(NO);
+}
+
++ (id)_true
+{
+    return @(true);
+}
+
++ (id)_false
+{
+    return @(false);
 }
 
 @end
