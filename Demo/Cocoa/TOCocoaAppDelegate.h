@@ -11,5 +11,7 @@
 @interface TOCocoaAppDelegate : NSObject <NSApplicationDelegate, NSTextViewDelegate, TOConsoleTextDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-
+@property (readonly) 	NSTextView *view;
+@property (nonatomic) 	CGFloat consoleTextSize;
+@property (nonatomic) 	BOOL contrast;
 @end
